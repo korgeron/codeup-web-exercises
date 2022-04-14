@@ -47,7 +47,7 @@ let choices = ("Your Choices Are: " + movie1 + ", " + movie2 + ", " + movie3);
         onclose(alert("Bad selections? OOPSE!!"))
     }
 function total1(number) {
-    return console.log(prompt(days1) * 3);
+    return console.log(parseInt(prompt(days1)) * 3);
 }
 let choice1 = "Would you like to rent " + movie1;
 let days1 = "How many days would you like?";
