@@ -52,7 +52,7 @@ function total1(number) {
 let choice1 = "Would you like to rent " + movie1;
 let days1 = "How many days would you like?";
     if (confirm(choice1) >= 1) {
-        console.log(prompt(days1));
+        console.log(parseInt(prompt(days1)) * 3);
     } else {
         total1 = 0;
     }
@@ -77,7 +77,7 @@ let days3 = "How many days would you like?";
     } else {
         total3 = 0;
     }
-    alert(total1 + total2 + total3);
+    alert(total1() + total2() + total3());
     /*function total1(number) {
       return console.log(prompt(days1) * 3);
   }
@@ -88,3 +88,4 @@ let days3 = "How many days would you like?";
     return console.log(prompt(days3) * 3);
 }
 */
+
