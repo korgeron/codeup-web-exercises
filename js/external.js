@@ -46,28 +46,45 @@ let choices = ("Your Choices Are: " + movie1 + ", " + movie2 + ", " + movie3);
   } else {
         onclose(alert("Bad selections? OOPSE!!"))
     }
+function total1(number) {
+    return console.log(prompt(days1) * 3);
+}
 let choice1 = "Would you like to rent " + movie1;
 let days1 = "How many days would you like?";
     if (confirm(choice1) >= 1) {
-        prompt(days1)
+        console.log(prompt(days1));
     } else {
-
+        total1 = 0;
     }
+function total2(number) {
+    return console.log(prompt(days2) * 3);
+}
 let choice2 = "Would you like to rent " + movie2;
 let days2 = "How many days would you like?";
     if (confirm(choice2) >= 1){
-        prompt(days2)
+        console.log(prompt(days2));
     } else {
-
+        total2 = 0;
     }
+function total3(number) {
+    return
+    console.info(days3)
+}
 let choice3 = "Would you like to rent " + movie3;
 let days3 = "How many days would you like?";
     if (confirm(choice3) >= 1) {
-        prompt(days3)
+        console.log(prompt(days3));
     } else {
-
+        total3 = 0;
     }
-
-
-
-
+    alert(total1 + total2 + total3);
+    /*function total1(number) {
+      return console.log(prompt(days1) * 3);
+  }
+    function total2(number) {
+       return console.log(prompt(days2) * 3);
+   }
+    function total3(number) {
+    return console.log(prompt(days3) * 3);
+}
+*/
