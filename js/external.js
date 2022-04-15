@@ -67,7 +67,7 @@ let choice3 = "Would you like to rent " + movie3;
     let totalDays3 = parseInt(prompt("Enter number of days to rent: "))
     return (totalDays3 * 3)
 }
- */
+ */a
     if (confirm(choice3) >= 1) {
         total3()
     } else {
