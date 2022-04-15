@@ -39,20 +39,31 @@ function choices () {
 function choice1 () {
  return confirm("Would you like to rent " + movie1 + "?")
 }
-    (choice1().valueOf() >= 1)
+    if (choice1().valueOf())
     {
         let days1 = prompt("Enter number of days you would like to rent for:") === true;
         days1
-    }
+    } else {
 
+    }
 
 //SECOND MOVIE CHOICE
 function choice2 () {
     return confirm("Would you like to rent " + movie2 + "?")
 }
-    if (choice2().valueOf() >= 1) {
+    if (choice2().valueOf()) {
         let days2 = prompt("Enter number of days you would like to rent for:")
         return days2
     } else {}
+
+//THIRD MOVIE CHOICE
+function choice3 () {
+    return confirm("Would you like to rent " + movie3 + "?")
+}
+    if (choice3().valueOf()) {
+        let days3 = prompt("Enter number of days you would like to rent for:")
+        return days3
+    } else {}
+
 
 } ())

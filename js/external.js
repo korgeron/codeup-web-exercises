@@ -38,7 +38,7 @@ let choice1 = "Would you like to rent " + movie1;
     return (totalDays1 * 3)
 }
  */
-    if (confirm(choice1) >= 1) {
+ /*   if (confirm(choice1) >= 1) {
         total1()
     } else {
         total1 = 0;
@@ -53,7 +53,7 @@ let choice2 = "Would you like to rent " + movie2;
     return (totalDays2 * 3)
 }
  */
-    if (confirm(choice2) >= 1){
+ /*   if (confirm(choice2) >= 1){
         total2()
     } else {
         total2 = 0;
@@ -67,8 +67,8 @@ let choice3 = "Would you like to rent " + movie3;
     let totalDays3 = parseInt(prompt("Enter number of days to rent: "))
     return (totalDays3 * 3)
 }
- */a
-    if (confirm(choice3) >= 1) {
+ */
+  /*  if (confirm(choice3) >= 1) {
         total3()
     } else {
         total3 = 0;
