@@ -1,4 +1,4 @@
-"use strict";
+/*"use strict";
 
 console.log("Hello from external JavaScript");
 //JS with HTML Exercises
@@ -13,7 +13,7 @@ alert(color + " is my favorite color too.");
 
 
  */
-
+/*
 //PROBLEM 3 STILL WORKING ON
 let question = confirm("Would you like to rent a movie for $3 per day?");
     if (question >= 1) {
@@ -75,5 +75,5 @@ let choice3 = "Would you like to rent " + movie3;
     }
     alert(total1() + total2() + total3());
 
-
+*/
 
