@@ -6,14 +6,14 @@
 //JS with HTML Exercises
 
 // PROBLEM 1
-    alert('Welcome to my Website!');
+   alert('Welcome to my Website!');
 
 // PROBLEM 2
     let color = prompt("What is your favorite color?");
 
     alert(color + " is my favorite color too.");
 
-// PROBLEM 3
+// PROBLEM 3.1
 
 //FIRST POP-UP WINDOW
     function movies () {
@@ -92,6 +92,38 @@
 
 //TOTAL WINDOW
     alert("Your total is " + "$" +(total1 + total2 + total3) + ".");
+
+//PROBLEM 3.2
+
+//GOOGLE PAY
+let pay1 = 400;
+let hours1 = 6;
+    function googlePay () {
+        alert("Your google pay is $" + (pay1 * hours1) + " for the week.")
+    }
+    googlePay();
+
+//FACEBOOK PAY
+let pay2 = 350;
+let hours2 = 10;
+    function facebookPay () {
+        alert("Your facebook pay is $" + (pay2 * hours2) + " for the week.")
+    }
+    facebookPay();
+
+//AMAZON PAY
+let pay3 = 380;
+let hours3 = 4;
+    function amazonPay () {
+        alert("Your amazon pay is $" + (pay3 * hours3) + " for the week.")
+    }
+    amazonPay();
+
+let payTotal1 = pay1 * hours1;
+let payTotal2 = pay2 * hours2;
+let payTotal3 = pay3 * hours3;
+alert("Your total paycheck comes out to $" + (payTotal1 + payTotal2 + payTotal3) + ".");
+
 
 } ())
 
