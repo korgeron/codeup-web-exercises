@@ -2,13 +2,6 @@
 "use strict";
 (function () {
 
-//WHAT TO DO
-    /*
-    * ask if they would like to rent a movie for 3$ a day
-    * let them choose what movie to pick
-    * let them choose how many days they want the movie for
-    * list the total price of the transaction
-    */
 
 //FIRST POP-UP WINDOW
 function movies () {
