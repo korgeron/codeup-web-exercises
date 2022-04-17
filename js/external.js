@@ -166,35 +166,60 @@ function scheduleStatus() {
 // HOW MANY ITEMS IN CART
 let cartCount;
 function cartTotal() {
-    cartCount = prompt("Enter total item amount:")
+    cartCount = prompt("Everything is $20\nEnter total item amount you want in your Cart:")
     return cartCount
 }
 
-//DISCOUNT VALIDATION
-let applyDiscount;
-function validDiscount() {
-    applyDiscount = isMember==true || cartCount >= 2
-}
+//CONDITIONS TO CONTINUE
+    if (cartTotal() > 0) {
+
+    } else {
+        onclose(alert("NO LOITERING!!!!"))
+    }
 
 //PREMIUM MEMBER CHECK / SIGN UP
 let isMember;
 function premiumMember(){
-    isMember = confirm("I hope you found everything needed today. \n Are you a Premium Member with us? \n Press OK for YES \n Press Cancel for NO")
+    isMember = confirm("Are you a Premium Member with us? \n Press OK for YES \n Press Cancel for NO")
     return isMember
 }
 let signUp;
 function becomeMember () {
     signUp = confirm("Would you like to become a Premium Member?")
+    return signUp
 }
+
+//DISCOUNT VALIDATION
+let applyDiscount = .20;
+function validDiscount() {
+        return (cartCount * 20) * applyDiscount
+    }
+
+//CHECKOUT
+
+function checkOut () {
+        return cartCount * 20
+    }
 
 //CONDITIONS FOR SIGN UP
     if (premiumMember()) {
-
+        return alert("Your checkout total is $" + validDiscount())
     } else {
         return becomeMember()
     }
-
-
+    if (signUp) {
+        return alert("Your checkout total is $" + validDiscount())
+    } else {
+        return alert("Your checkout total is $" + checkOut())
+    }
+/*
+//CONDITIONS FOR DISCOUNT / CHECKOUT
+    if (isMember) {
+        //return alert("Your checkout total is $" + validDiscount())
+    } else {
+       return alert("Your checkout total is $" + checkOut())
+    }
+*/
 
 
 } ())
