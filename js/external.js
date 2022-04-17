@@ -124,6 +124,26 @@ let payTotal2 = pay2 * hours2;
 let payTotal3 = pay3 * hours3;
 alert("Your total paycheck comes out to $" + (payTotal1 + payTotal2 + payTotal3) + ".");
 
+//PROBLEM 3.3
+
+//ENROLLMENT STATUS
+let isEnrolled;
+function enrollmentStatus() {
+    isEnrolled = confirm("Are you enrolled?")
+}
+
+//CLASS STATUS
+let isFull;
+function classStatus() {
+    isFull = confirm("Is the class full?")
+}
+
+//SCHEDULE STATUS
+let noConflict;
+function scheduleStatus() {
+
+}
+
 
 } ())
 
