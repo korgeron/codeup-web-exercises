@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-
+/*
     console.log("Hello from external JavaScript");
 //JS with HTML Exercises
 
@@ -129,20 +129,72 @@ alert("Your total paycheck comes out to $" + (payTotal1 + payTotal2 + payTotal3)
 //ENROLLMENT STATUS
 let isEnrolled;
 function enrollmentStatus() {
-    isEnrolled = confirm("Are you enrolled?")
+    isEnrolled = alert("CONGRATULATIONS!!! \n You are now enrolled for our upcomming summer course!")
 }
 
 //CLASS STATUS
 let isFull;
 function classStatus() {
-    isFull = confirm("Is the class full?")
+    isFull = confirm("Does the class you want to take have open seats? \n Press OK for YES \n Press Cancel for NO")
+    return isFull
 }
 
 //SCHEDULE STATUS
 let noConflict;
 function scheduleStatus() {
-
+    noConflict = confirm("Does the class schedule work with your life schedule? \n Press OK for YES \n Press Cancel for NO")
+    return noConflict
 }
+
+    alert("Lets see if you are eligible to enroll in our summer classes.")
+
+//CONDITIONS
+    if (classStatus()) {
+
+    } else {
+        onclose(alert("Sorry!! :( \n Try again next semester."))
+    }
+
+    if (scheduleStatus()) {
+        return enrollmentStatus()
+     } else {
+         onclose(alert("Sorry to hear that... \n COME BACK IF YOU CHANGE YOUR MIND!"))
+     }
+*/
+//PROBLEM 3.4
+
+// HOW MANY ITEMS IN CART
+let cartCount;
+function cartTotal() {
+    cartCount = prompt("Enter total item amount:")
+    return cartCount
+}
+
+//DISCOUNT VALIDATION
+let applyDiscount;
+function validDiscount() {
+    applyDiscount = isMember==true || cartCount >= 2
+}
+
+//PREMIUM MEMBER CHECK / SIGN UP
+let isMember;
+function premiumMember(){
+    isMember = confirm("I hope you found everything needed today. \n Are you a Premium Member with us? \n Press OK for YES \n Press Cancel for NO")
+    return isMember
+}
+let signUp;
+function becomeMember () {
+    signUp = confirm("Would you like to become a Premium Member?")
+}
+
+//CONDITIONS FOR SIGN UP
+    if (premiumMember()) {
+
+    } else {
+        return becomeMember()
+    }
+
+
 
 
 } ())
