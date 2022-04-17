@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-/*
+
     console.log("Hello from external JavaScript");
 //JS with HTML Exercises
 
@@ -156,11 +156,11 @@ function scheduleStatus() {
     }
 
     if (scheduleStatus()) {
-        return enrollmentStatus()
+        enrollmentStatus()
      } else {
          onclose(alert("Sorry to hear that... \n COME BACK IF YOU CHANGE YOUR MIND!"))
      }
-*/
+
 //PROBLEM 3.4
 
 // HOW MANY ITEMS IN CART
@@ -205,21 +205,13 @@ function checkOut () {
     if (premiumMember()) {
         return alert("Your checkout total is $" + validDiscount())
     } else {
-        return becomeMember()
+
     }
-    if (signUp) {
+    if (becomeMember()) {
         return alert("Your checkout total is $" + validDiscount())
     } else {
         return alert("Your checkout total is $" + checkOut())
     }
-/*
-//CONDITIONS FOR DISCOUNT / CHECKOUT
-    if (isMember) {
-        //return alert("Your checkout total is $" + validDiscount())
-    } else {
-       return alert("Your checkout total is $" + checkOut())
-    }
-*/
 
 
 } ())
