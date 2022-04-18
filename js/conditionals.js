@@ -173,22 +173,22 @@
      */
 //PROBLEM 7
 
-function analyzeData (num) {
-let addNum = num + 100;
-        if (num % 2 === 0 && num % 2 >= 0) {
-            alert("This number is even\n" + num + " + 100 = " + (addNum) + "\nThis number is a positive number"  )
-        } else if (num % 2 !== 0 && num % 2 >= 0) {
-            alert("This number is odd \n" + num + " + 100 = " + (addNum) + "\nThis number is a positive number")
-        } else if (num % 2 === 0 && num % 2 <= 0) {
-            alert("This number is even\n" + num + " + 100 = " + (addNum) + "\nThis number is a negative number"  )
-        } else {
-            alert("This number is odd \n" + num + " + 100 = " + (addNum) + "\nThis number is a negative number")
-        }
-    }
-
-
-
-    console.log(analyzeData(parseInt(prompt("Enter number here:"))));
+// function analyzeData (num) {
+// let addNum = num + 100;
+//         if (num % 2 === 0 && num % 2 >= 0) {
+//             alert("This number is even\n" + num + " + 100 = " + (addNum) + "\nThis number is a positive number"  )
+//         } else if (num % 2 !== 0 && num % 2 >= 0) {
+//             alert("This number is odd \n" + num + " + 100 = " + (addNum) + "\nThis number is a positive number")
+//         } else if (num % 2 === 0 && num % 2 <= 0) {
+//             alert("This number is even\n" + num + " + 100 = " + (addNum) + "\nThis number is a negative number"  )
+//         } else {
+//             alert("This number is odd \n" + num + " + 100 = " + (addNum) + "\nThis number is a negative number")
+//         }
+//     }
+//
+//
+//
+//     console.log(analyzeData(parseInt(prompt("Enter number here:"))));
 
 
 }())
