@@ -17,7 +17,7 @@
 
 //FIRST POP-UP WINDOW
     function movies () {
-        return confirm("Would you like to rent a movie/movies for $3 a day? ") === true;
+        return confirm("Would you like to rent a movie/movies for $3 a day? ")
     }
 
 //CALLS ^ FUNCTION / PASSES TO NEXT
@@ -37,7 +37,9 @@
     }
 
 //CALLS ^ FUNCTION / PASSES TO NEXT
-    if (choices().valueOf()) {}
+    if (choices().valueOf()) {
+
+    }
     else {
         return onclick((alert("BAD Selections? OOPSE >:)")))
     }
