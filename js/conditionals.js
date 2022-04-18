@@ -1,11 +1,7 @@
+//problem answers are bookmarked
 "use strict";
 
 (function () {
-//TODO: FUNCTION FOR PROBLEMS
-    let dataEntry;
-    function analyzeColor() {
-        return dataEntry
-    }
 
 
     /* ########################################################################## */
@@ -31,15 +27,18 @@
      */
 
 //PROBLEM 1
-     dataEntry = prompt("Enter color to analyze:")
-    if (dataEntry === "blue") {
-        alert("blue is the color of the sky")
-    } else if (dataEntry === "red") {
-        alert("Strawberries are red")
-    } else {
-        alert("I don't know anything about " + dataEntry)
-    }
-
+// function analyzeColor(str) {
+//     if (str === "blue") {
+//         return "blue is the color of the sky"
+//     } else if (str === "red") {
+//         return "Strawberries are red"
+//     } else {
+//         return "I don't know anything about " + str
+//     }
+// }
+//     console.log((analyzeColor("blue")));
+//     console.log((analyzeColor("red")));
+//     console.log((analyzeColor("green")));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -55,11 +54,8 @@
      */
 
 
-//PROBLEM 2
-/*
-    dataEntry = randomColor;
-        console.log(dataEntry);
-*/
+//PROBLEM 2 (FUNCTION IS LOCATED AT PROBLEM 1
+//     console.log(analyzeColor(randomColor));
 
     /**
      * TODO:
@@ -67,24 +63,21 @@
      */
 
 //PROBLEM 3
-
-    dataEntry = randomColor;
-
-
-    switch (randomColor) {
-        case "red":
-            alert(randomColor + " means STOP!");
-                break;
-        case "yellow":
-            alert(randomColor + " means YIELD!");
-                break;
-        case "green":
-            alert(randomColor + " means GO! GO! GO!!!");
-                break;
-        default:
-            alert("DOES NOT COMPUTE!!!")
-                break;
+    function analyzeColor(str) {
+        switch (str) {
+            case "blue":
+                return "blue is the color of the sky";
+            case "red":
+                return "Strawberries are red";
+            default :
+                return "I don't know anything about " + str;
+        }
     }
+
+//     console.log((analyzeColor("blue")));
+//     console.log((analyzeColor("red")));
+//     console.log((analyzeColor("green")));
+
 
     /**
      * TODO:
@@ -94,6 +87,10 @@
      */
 
 //PROBLEM 4
+
+// let nameColor = prompt("Enter a color:");
+//     console.log(analyzeColor(nameColor));
+
 
     /* ########################################################################## */
 
@@ -116,6 +113,30 @@
      * Test your function by passing it various values and checking for the expected
      * return value.
      */
+//PROBLEM 5
+
+
+    function calculateTotal(luckNum, amount) {
+        switch (luckNum) {
+            case 0:
+                return amount
+            case 1:
+                return amount * .10
+            case 2:
+                return amount * .25
+            case 3:
+                return amount * .35
+            case 4:
+                return amount * .50
+            case 5:
+                return amount = 0
+        }
+    }
+
+    // console.log(calculateTotal(0, 100));
+    // console.log(calculateTotal(4, 100));
+    // console.log(calculateTotal(5, 100));
+
 
     /**
      * TODO:
@@ -126,7 +147,11 @@
      * price before the discount was, and what their price after the discount is.
      */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+    let luckyNumber = Math.floor(Math.random() * 6);
+
+//PROBLEM 6
+
+    // console.log(calculateTotal(luckyNumber, prompt("Enter number here:").trim()));
 
     /**
      * TODO:
@@ -146,11 +171,24 @@
      * Can you refactor your code to use functions?
      * HINT: The way we prompt for a value could be improved
      */
+//PROBLEM 7
+
+function analyzeData (num) {
+let addNum = num + 100;
+        if (num % 2 === 0 && num % 2 >= 0) {
+            alert("This number is even\n" + num + " + 100 = " + (addNum) + "\nThis number is a positive number"  )
+        } else if (num % 2 !== 0 && num % 2 >= 0) {
+            alert("This number is odd \n" + num + " + 100 = " + (addNum) + "\nThis number is a positive number")
+        } else if (num % 2 === 0 && num % 2 <= 0) {
+            alert("This number is even\n" + num + " + 100 = " + (addNum) + "\nThis number is a negative number"  )
+        } else {
+            alert("This number is odd \n" + num + " + 100 = " + (addNum) + "\nThis number is a negative number")
+        }
+    }
 
 
 
-
-
+    console.log(analyzeData(parseInt(prompt("Enter number here:"))));
 
 
 }())

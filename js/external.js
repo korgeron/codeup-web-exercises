@@ -21,7 +21,9 @@
     }
 
 //CALLS ^ FUNCTION / PASSES TO NEXT
-    if (movies().valueOf()) {}
+    if (movies().valueOf()) {
+
+    }
     else {
         return onclick((alert("Maybe next time.")))
     }
