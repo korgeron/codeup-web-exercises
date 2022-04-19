@@ -55,7 +55,7 @@
 
 
 //PROBLEM 2 (FUNCTION IS LOCATED AT PROBLEM 1
-//     console.log(analyzeColor(randomColor));
+     //console.log(analyzeColor(randomColor));
 
     /**
      * TODO:
@@ -63,20 +63,21 @@
      */
 
 //PROBLEM 3
-    function analyzeColor(str) {
-        switch (str) {
-            case "blue":
-                return "blue is the color of the sky";
-            case "red":
-                return "Strawberries are red";
-            default :
-                return "I don't know anything about " + str;
-        }
-    }
-
+//     function analyzeColor(str) {
+//         switch (str) {
+//             case "blue":
+//                 return "blue is the color of the sky";
+//             case "red":
+//                 return "Strawberries are red";
+//             default :
+//                 return "I don't know anything about " + str;
+//         }
+//     }
+//
 //     console.log((analyzeColor("blue")));
 //     console.log((analyzeColor("red")));
 //     console.log((analyzeColor("green")));
+//     console.log(analyzeColor(prompt("Enter text")));
 
 
     /**
@@ -116,22 +117,22 @@
 //PROBLEM 5
 
 
-    function calculateTotal(luckNum, amount) {
-        switch (luckNum) {
-            case 0:
-                return amount
-            case 1:
-                return amount * .10
-            case 2:
-                return amount * .25
-            case 3:
-                return amount * .35
-            case 4:
-                return amount * .50
-            case 5:
-                return amount = 0
-        }
-    }
+    // function calculateTotal(luckNum, amount) {
+    //     switch (luckNum) {
+    //         case 0:
+    //             return amount
+    //         case 1:
+    //             return amount * .10
+    //         case 2:
+    //             return amount * .25
+    //         case 3:
+    //             return amount * .35
+    //         case 4:
+    //             return amount * .50
+    //         case 5:
+    //             return amount = 0
+    //     }
+    // }
 
     // console.log(calculateTotal(0, 100));
     // console.log(calculateTotal(4, 100));
@@ -181,14 +182,16 @@
 //             alert("This number is odd \n" + num + " + 100 = " + (addNum) + "\nThis number is a positive number")
 //         } else if (num % 2 === 0 && num % 2 <= 0) {
 //             alert("This number is even\n" + num + " + 100 = " + (addNum) + "\nThis number is a negative number"  )
-//         } else {
+//         } else if (num % 2 !== 0 && num % 2 <= 0) {
 //             alert("This number is odd \n" + num + " + 100 = " + (addNum) + "\nThis number is a negative number")
+//          } else if (num !== num) {
+//             alert("Sorry, that's not a number.")
 //         }
 //     }
 //
 //
 //
-//     console.log(analyzeData(parseInt(prompt("Enter number here:"))));
+//     (analyzeData(parseFloat(prompt("Enter number here:"))));
 
 
 }())
