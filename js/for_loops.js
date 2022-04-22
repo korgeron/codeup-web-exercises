@@ -56,14 +56,22 @@
  * 999999999
  **/
 
-function oneMoreNumber(){
-let num2 = "2"
-    for (let num = "1"; num < 10; num++){
+// function oneMoreNumber(){
+//     for (let num = 1; num < 10; num++){
+//         console.log(num.toString().repeat(num));
+//     }
+// }
+// oneMoreNumber();
+
+//PROBLEM 4
+/**TODO:
+ * create for loop
+ * console log it
+ * number starts at 100
+ * decreases by 5 till it reaches 5
+ **/
+function name() {
+    for (let num = 100; num <=5; ){
         console.log(num);
     }
 }
-oneMoreNumber();
-
-
-
-
