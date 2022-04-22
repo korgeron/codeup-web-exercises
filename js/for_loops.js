@@ -63,6 +63,21 @@
 // }
 // oneMoreNumber();
 
+//TODO: WALK THROUGH
+// function numberPyramid(){
+//     for (let y = 1; y < 10; y++){
+//         let str = "";
+//     for (let x = 1; x <= y; x++){
+//         str += y;
+//     }
+//         console.log(str);
+//     }
+// }
+
+
+
+
+
 //PROBLEM 4
 /**TODO:
  * create for loop
@@ -73,3 +88,12 @@
 // for (let x = 100; x>=5;x-- + x-- + x-- + x-- + x--) {
 //     console.log(x);
 // }
+
+
+//TODO: WALK THROUGH
+// function downByFive(startVal){
+//     for (startVal; startVal > 0; startVal -= 5){
+//         console.log(startVal);
+//     }
+// }
+// downByFive(100);
