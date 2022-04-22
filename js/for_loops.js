@@ -70,8 +70,6 @@
  * number starts at 100
  * decreases by 5 till it reaches 5
  **/
-function name() {
-    for (let num = 100; num <=5; ){
-        console.log(num);
-    }
-}
+// for (let x = 100; x>=5;x-- + x-- + x-- + x-- + x--) {
+//     console.log(x);
+// }
