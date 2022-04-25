@@ -11,12 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-// let person = {
-//     firstName : 'Kevin',
-//     lastName : 'Orgeron'
-//     };
-//     console.log(person.firstName);
-//     console.log(person.lastName);
+let person = {
+    firstName : 'Kevin',
+    lastName : 'Orgeron'
+    };
+    console.log(person.firstName);
+    console.log(person.lastName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -26,8 +26,8 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-// person.sayHello = 'Hello from ' + person.firstName + ' ' + person.lastName;
-//     console.log(person.sayHello);
+person.sayHello = 'Hello from ' + person.firstName + ' ' + person.lastName;
+    console.log(person.sayHello);
 
 
     /** TODO:
@@ -140,11 +140,11 @@ let books = [
      *      ---
      *      ...
      */
-    let i = 1;
-for (let book of books){
-    console.log("Book # " + i + "\n" + 'Title: ' + book.title + "\n" + 'Author: ' + book.author.firstName + ' ' + book.author.lastName);
-    i++;
-}
+//     let i = 1;
+// for (let book of books){
+//     console.log("Book # " + i + "\n" + 'Title: ' + book.title + "\n" + 'Author: ' + book.author.firstName + ' ' + book.author.lastName);
+//     i++;
+// }
 
 
     /**
@@ -157,5 +157,7 @@ for (let book of books){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
 
 })();
