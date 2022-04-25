@@ -1,11 +1,12 @@
 "use strict";
 //PROBLEM 1
-//TODO: WALK THROUGH
-// function multiplyByTwo(){
-//     let x = 1;
-//     while (x < 65536){
-//         x*=2;
-//         console.log(x);
-//     }
-// }
+let multiplesOfTwo = function (){
+    let num = 1;
+        while (num < 65536){
+            num = num * 2;
+            console.log(num);
+        }
+
+}
+multiplesOfTwo();
 
