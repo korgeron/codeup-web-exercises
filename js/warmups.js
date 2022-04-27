@@ -67,11 +67,11 @@ console.log("Yay! I completed the warm-up!");
 
 function firstLetters(myArr){
     let b = '';
-    for (let arr of myArr){
-        b += arr.substring(0,1);
+    for (let arr of myArr)
+        b += arr[0];
 
 
-        console.log(arr);
-    }
+        console.log(b);
+
 }
 firstLetters(['dog' , 'wolf', 'monkey', 'bear']);
