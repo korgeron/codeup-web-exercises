@@ -61,3 +61,17 @@ console.log("Yay! I completed the warm-up!");
 //         }
 //     }
 // } fizzBuzz();
+
+
+//DATE: 04/27/22
+
+function firstLetters(myArr){
+    let b = '';
+    for (let arr of myArr){
+        b += arr.substring(0,1);
+
+
+        console.log(arr);
+    }
+}
+firstLetters(['dog' , 'wolf', 'monkey', 'bear']);
