@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register With Us</title>
+    </head>
+    <body>
+    <h2>Lets Get You Set Up For An Email!</h2>
+        <form method="POST" action="https://request-inspector.glitch.me/">
+            <p>Create an email and password:
+                <br>
+            <input type="email" name="email" id="email" placeholder="example@example.com">
+            <label for="email"> </label>
+                <br>
+            <input type="password" name="password" id="password" placeholder="All_star123">
+            <label for="password"> </label>
+                <br>
+            <p> Bio:
+                <br>
+            <textarea name="about-user" id="about-user" cols="20" rows="10" placeholder="tell me about yourself"></textarea>
+                <br>
+            <label for="about-user"></label>
+                <hr>
+    <h2>How Did You Hear About Us??</h2>
+            <input type="radio" name="hear-about-us-question-1" id="billboard" value="billboard">
+            <label for="billboard">Billboard</label>
+                <br>
+            <input type="radio" name="hear-about-us-question-2" id="radio-advertisement" value="radio-advertisement">
+            <label for="radio-advertisement">Radio Advertisement</label>
+                <br>
+            <input type="radio" name="hear-about-us-question-3" id="internet-advertisement" value="internet-advertisement">
+            <label for="internet-advertisement">Internet Advertisement</label>
+                <br>
+            <input type="radio" name="hear-about-us-question-4" id="other" value="other">
+            <label for="other">Other</label>
+                <br>
+            <label for="web-browser">What Web Browser Are You Using?</label>
+            <select name="web-browser" id="web-browser">
+                <option value="FireFox">Fire Fox</option>
+                <option value="chrome">Google Chrome</option>
+                <option value="other">Other</option>
+            </select>
+                <br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
