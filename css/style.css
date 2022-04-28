@@ -1,3 +1,39 @@
 .fancy-header {
     color: purple;
+    text-align: center;
+}
+
+.heading {
+    color: orange;
+    text-decoration: underline;
+}
+
+.page {
+    background-color: rgba(111, 87, 41, 0.42);
+    padding: 10px;
+}
+
+.bg-image {
+    background-image: url(../img/pexels-photo-235985.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+}
+.list-style{
+    list-style: square;
+}
+
+.page-font{
+    font-family: "Droid Sans", sans-serif;
+}
+
+.table-font{
+    padding: 10px;
+    font-size: 30px;
+}
+
+.hover:hover{
+    color: chartreuse;
+    font-size: larger;
+    background-color: black;
 }
