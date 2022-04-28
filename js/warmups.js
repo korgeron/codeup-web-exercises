@@ -65,10 +65,18 @@ console.log("Yay! I completed the warm-up!");
 
 //DATE: 04/27/22
 
-function firstLetters(myArr){
-    let b = '';
-    for (let arr of myArr)
-        b += arr[0];
-            console.log(b);
+// function firstLetters(myArr){
+//     let b = '';
+//     for (let arr of myArr)
+//         b += arr[0];
+//             console.log(b);
+// }
+// firstLetters(['dog' , 'wolf', 'monkey', 'bear']);
+
+//DATE: 04/28/22
+function alphabetOrder (str) {
+    if (typeof str === 'string') {
+        return str.split('').sort().join('')
+    }
 }
-firstLetters(['dog' , 'wolf', 'monkey', 'bear']);
+console.log(alphabetOrder("bikes"));
