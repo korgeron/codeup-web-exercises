@@ -32,8 +32,18 @@
     font-size: 30px;
 }
 
-.hover:hover{
+.change-color{
+    color: aqua;
+}
+.change-color:visited{
+    color: darkgray;
+    font-size: smaller;
+}
+.change-color:hover{
     color: chartreuse;
     font-size: larger;
     background-color: black;
+}
+.change-color:active {
+    color: red;
 }
