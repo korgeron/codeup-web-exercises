@@ -69,9 +69,6 @@ function firstLetters(myArr){
     let b = '';
     for (let arr of myArr)
         b += arr[0];
-
-
-        console.log(b);
-
+            console.log(b);
 }
 firstLetters(['dog' , 'wolf', 'monkey', 'bear']);
