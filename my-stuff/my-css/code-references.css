@@ -2,6 +2,37 @@ body{
     font-family: 'Water Brush', cursive;
 }
 
+header{
+    background-color: #451FCA;
+}
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.logo{
+    float: left;
+}
+nav {
+    float: right;
+}
+nav ul{
+    margin: 0;
+    list-style: none;
+}
+
+nav li {
+    font-family: Arial, cursive ;
+    display: inline-block;
+
+}
+
 .my-background-image {
     background-image: url(../../my-stuff/my-img/silhouette-a-hacker-in-a-hood-with-binary-code-vector-33562259.jpeg);
     background-size: cover;
@@ -15,5 +46,6 @@ body{
     position: fixed;
     bottom: 0;
     right: 0;
+    padding-right: 20px;
 }
 
