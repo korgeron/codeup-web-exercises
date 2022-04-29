@@ -1,0 +1,19 @@
+body{
+    font-family: 'Water Brush', cursive;
+}
+
+.my-background-image {
+    background-image: url(../../my-stuff/my-img/silhouette-a-hacker-in-a-hood-with-binary-code-vector-33562259.jpeg);
+    background-size: cover;
+    height: 900px;
+    width: 1000px;
+    background-position: center;
+}
+
+.my-bottom-logo{
+    color: red;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
