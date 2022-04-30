@@ -1,4 +1,4 @@
-body{
+.google-font{
     font-family: 'Water Brush', cursive;
 }
 
@@ -30,7 +30,14 @@ nav ul{
 nav li {
     font-family: Arial, cursive ;
     display: inline-block;
-
+    padding: 15px;
+}
+nav a{
+    text-decoration: none;
+    color: grey;
+}
+nav a:hover{
+    color: greenyellow;
 }
 
 .my-background-image {
