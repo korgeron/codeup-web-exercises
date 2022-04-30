@@ -39,7 +39,18 @@ nav a{
 nav a:hover{
     color: greenyellow;
 }
+.my-text-color{
+    color: red;
+}
+.my-text-size{
+    font-size: 14px;
+}
 
+.definition{
+    text-align: center;
+    font-size: 16px;
+    color: orange;
+}
 .my-background-image {
     background-image: url(../../my-stuff/my-img/silhouette-a-hacker-in-a-hood-with-binary-code-vector-33562259.jpeg);
     background-size: cover;
