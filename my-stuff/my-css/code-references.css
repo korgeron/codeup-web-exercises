@@ -2,8 +2,18 @@
     font-family: 'Water Brush', cursive;
 }
 
+body{
+    overflow-x: hidden;
+    /*overflow-y: auto;*/
+}
+
 header{
     background-color: #451FCA;
+    height: 50px;
+    width: 1050px;
+    position: relative;
+    margin-top: -8px;
+    margin-left: -20px;
 }
 
 header::after{
