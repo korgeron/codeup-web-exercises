@@ -12,7 +12,7 @@ body, html {
 
 form {
     padding: 1em;
-
+    margin: 1em;
 
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
@@ -75,7 +75,9 @@ fieldset {
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: 100%;
+
+    width: calc(100% - 4px);
+    padding: .5em 0;
 }
 
 
