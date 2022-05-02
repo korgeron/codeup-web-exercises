@@ -73,10 +73,21 @@ console.log("Yay! I completed the warm-up!");
 // }
 // firstLetters(['dog' , 'wolf', 'monkey', 'bear']);
 
-//DATE: 04/28/22
-function alphabetOrder (str) {
-    if (typeof str === 'string') {
-        return str.split('').sort().join('')
-    }
-}
-console.log(alphabetOrder("bikes"));
+//DATE: 04/28/2022
+// function alphabetOrder (str) {
+//     if (typeof str === 'string') {
+//         return str.split('').sort().join('')
+//     }
+// }
+// console.log(alphabetOrder("bikes"));
+
+//DATE: 05/02/2022
+//TODO: WALK THROUGH
+// function sumOfElements(arr){
+//     let bucket = 0;
+//     for (let el of arr){
+//         bucket += el;
+//     }
+//         return bucket;
+// }
+// console.log(sumOfElements([1, 2, 3, 4, 5]));
