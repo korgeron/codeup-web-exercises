@@ -55,8 +55,7 @@ fieldset {
 }
 
 .btn {
-    padding: 8px;
-
+    padding: 8px 0;
     color: white;
     font-weight: bold;
     border: lightgrey 1px solid;
