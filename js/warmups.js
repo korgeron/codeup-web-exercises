@@ -91,3 +91,31 @@ console.log("Yay! I completed the warm-up!");
 //         return bucket;
 // }
 // console.log(sumOfElements([1, 2, 3, 4, 5]));
+
+//DATE: 05/03/2022
+let product1 = {
+    name: 'Hammar',
+    priceInCents: 400,
+    description: 'It is a a hammar.',
+    inventory: 25034
+}
+
+let product2 = {
+    name: 'Computer',
+    priceInCents: 40000,
+    description: 'It is a computer.',
+    inventory: 33000
+}
+
+let product3 = {
+    name: 'Ruler',
+    priceInCents: 1000,
+    description: 'It is a ruler.',
+    inventory: 2200
+}
+function returnProductEssentialDetails (x) {
+   if (typeof x === 'object'){
+        return 'Name: ' + x.name + ' , ' + x.priceInCents
+   }
+}
+console.log(returnProductEssentialDetails(product1));
