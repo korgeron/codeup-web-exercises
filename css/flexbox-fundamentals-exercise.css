@@ -33,22 +33,27 @@ h2, h3 {
     background: white;
     padding: 1em;
     margin: 0 auto;
+    /*code goes here*/
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 section {
+    /*code goes here*/
     display: flex;
-    flex-direction: row;
+
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
+    /*code goes here*/
     justify-content: space-between;
     align-items: center;
 }
 section:nth-of-type(1) div:last-child {
+    /*code goes here*/
     align-self: flex-start;
 }
 
@@ -56,14 +61,15 @@ section:nth-of-type(1) div:last-child {
     background: fuchsia;
     width: 3em;
     height: 1em;
-    margin-top: 1em;
 }
 
 .purple-box:nth-of-type(1) {
+    /*code goes here*/
     flex-grow: 2;
 }
 
 .purple-box:nth-of-type(2) {
+    /*code goes here*/
     flex-grow: 1;
 }
 
@@ -75,12 +81,13 @@ section:nth-of-type(1) div:last-child {
 }
 
 section:nth-of-type(3) {
-    align-content: center;
-
+    /*code goes here*/
+align-items: center;
 }
 
 section:nth-of-type(3) h3 {
-
+    /*code goes here*/
+    flex-grow: 1;
 
 }
 
@@ -96,7 +103,8 @@ section:nth-of-type(3) h3 {
     height: 5em;
     width: 5em;
     background: brown;
-    /* enter needed declarations here */
+    /*code goes here*/
+    flex-grow: 1;
 }
 
 .large-brown-box:nth-of-type(2) {
@@ -104,7 +112,8 @@ section:nth-of-type(3) h3 {
 }
 
 section:nth-of-type(5) {
-    /* enter needed declarations here */
+    /*code goes here*/
+    justify-content: space-evenly;
 }
 
 .yellow-box {
@@ -116,7 +125,10 @@ section:nth-of-type(5) {
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
-    /* enter needed declarations here */
+    /*code goes here*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .grey-box {
