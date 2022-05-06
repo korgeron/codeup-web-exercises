@@ -1,0 +1,21 @@
+.nav-link:hover{
+    color: orange!important;
+}
+.sign-up-button-color{
+    color: black!important;
+}
+/*ABOVE CSS IS FOR THE NAVBAR SIGN-UP BUTTON*/
+
+.jumbotron{
+    background-image: url(../my-stuff/my-img/pizza.png) !important;
+    height: 346px!important;
+    background-size: cover!important;
+
+}
+
+.Pizza-World{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 9rem;
+}
