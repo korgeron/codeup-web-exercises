@@ -1,0 +1,25 @@
+.nav-item a:hover{
+    color: white !important;
+    background-color: black !important;
+}
+
+
+.form-control{
+    margin-right: 300px!important;
+    height: 50px!important;
+    margin-top: .1em;
+}
+
+.btn{
+    display: flex !important;
+    flex-wrap: wrap!important;
+    height: 50px!important;
+    width: 100% !important;
+    justify-content: center!important;
+    align-content: center!important;
+    position: relative!important;
+    margin: 1px;
+   right: 290px;
+    top: 1px;
+    max-block-size: fit-content!important;
+}
