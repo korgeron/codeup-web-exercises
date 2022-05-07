@@ -46,21 +46,21 @@
 <!--NAV TAB START-->
 <div class="container">
     <h1>Build your own pizza!</h1>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link" href="#">
+    <ul class="nav nav-tabs" id="tab-bar" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="sizeCrust-tab" data-bs-toggle="tab" data-bs-target="card-1" type="button" role="tab" aria-controls="card-1" aria-selected="true">
                 <span class="badge bg-secondary">1</span> Size and Crust
-            </a>
+            </button>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="cheeseSauce-tab" data-bs-toggle="tab" data-bs-target="card-2" type="button" role="tab" aria-controls="card-2" aria-selected="false">
                 <span class="badge bg-secondary">2</span> Cheese and Sauce
-            </a>
+            </button>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="toppings-tab" data-bs-toggle="tab" data-bs-target="card-3" type="button" role="tab" aria-controls="card-3" aria-selected="false">
                 <span class="badge bg-secondary">3</span> Toppings
-            </a>
+            </button>
         </li>
     </ul>
     <!--NAV TAB END-->
