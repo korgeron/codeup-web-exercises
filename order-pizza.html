@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
+<script src="js/custom.js"></script>
 <!--NAVBAR START-->
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container-fluid ">
@@ -47,7 +48,7 @@
     <h1>Build your own pizza!</h1>
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" href="#">
+            <a class="nav-link" href="#">
                 <span class="badge bg-secondary">1</span> Size and Crust
             </a>
         </li>
@@ -62,20 +63,19 @@
             </a>
         </li>
     </ul>
-<!--NAV TAB END-->
+    <!--NAV TAB END-->
 
-    <!--START OF CARD FOR SIZE AND CRUST-->
+    <!--START OF FIRST NAV TAB CARD-->
     <div class="card">
         <div class="card-header bg-primary text-white">
             Choose Size and Crust
         </div>
         <div class="card-body">
-            <!--FIRST CARD IN CARD BODY-->
+            <!--FIRST CARD IN MAIN CARD BODY-->
             <div class="card">
                 <div class="card-header bg-secondary bg-opacity-10">
                     Hand Tossed
                 </div>
-                <!--FIRST CARD BODY-->
                 <div class="list-group list-group-flush">
                     <div class="list-group-item">
                         Garlic seasoned crust with a rich, buttery taste.
@@ -98,9 +98,9 @@
                     </div>
                 </div>
             </div>
-            <!--FIRST CARD INSIDE BODY END-->
+            <!--FIRST CARD INSIDE MAIN BODY CARD END-->
             <br>
-            <!--SECOND CARD INSIDE BODY-->
+            <!--SECOND CARD INSIDE MAIN BODY CARD-->
             <div class="card">
                 <div class="card-header bg-secondary bg-opacity-10">
                     Crispy Thin
@@ -127,7 +127,7 @@
                     </div>
                 </div>
             </div>
-            <!--SECOND CARD INSIDE BODY END-->
+            <!--SECOND CARD INSIDE MAIN BODY CARD END-->
 
         </div>
         <!--CARD FOOTER-->
@@ -139,15 +139,86 @@
             </div>
         </div>
     </div>
-        <br>
+    <!--END OF FIRST NAV TAB CARD-->
+    <br>
+    <!--SECOND NAV TAB CARD-->
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Choose Cheese and Sauce
+        </div>
+        <div class="card-body">
+            <!--FIRST CARD IN SECOND NAV CARD BODY-->
+            <div class="card">
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item bg-secondary bg-opacity-10">
+                        Cheese
+                    </div>
+                    <div class="list-group-item">
+                        How Much?
+                    </div>
+                    <div class="list-group-item">
+                        <select class="form-select">
+                            <option value="Regular">
+                                Normal
+                            </option>
+                            <option value="extra">
+                                Extra Cheese
+                            </option>
+                        </select>
+                    </div>
+                </div>
 
-
+                <!--END OF FIRST CARD IN SECOND NAV CARD BODY-->
+            </div>
+            <br>
+            <div class="list-group ">
+                <div class="list-group-item bg-secondary bg-opacity-10">
+                    Sauce
+                </div>
+                <div class="list-group-item">
+                    What Type?
+                </div>
+                <div class="list-group-item">
+                    <select class="form-select">
+                        <option value="Regular">
+                            Tomato
+                        </option>
+                        <option value="Other">
+                            Other
+                        </option>
+                    </select>
+                </div>
+                <div class="list-group-item">
+                    How Much?
+                </div>
+                <div class="list-group-item">
+                    <select class="form-select">
+                        <option value="Regular">
+                            Normal
+                        </option>
+                        <option value="Extra">
+                            Extra Sauce
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--CARD FOOTER-->
+        <div class="card-footer bg-secondary bg-opacity-10">
+            <div class="d-flex justify-content-end">
+                <button class="btn-primary" type="button">
+                    < Previous
+                </button>
+                <button class="btn-primary" type="button">
+                    Next >
+                </button>
+            </div>
+        </div>
+    </div>
+    <br>
 </div>
 
-<!--END OF FIRST NAV TAB-->
-
-
-
+<!--END OF SECOND NAV TAB CARD-->
 
 
 
