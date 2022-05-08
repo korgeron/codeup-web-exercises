@@ -50,19 +50,22 @@
     <h1>Build your own pizza!</h1>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="size-tab" data-bs-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true">
+            <button class="nav-link active" id="size-tab" data-bs-toggle="tab" href="#size" role="tab" aria-controls="size"
+               aria-selected="true">
                 <span class="badge bg-secondary">1</span> Size and Crust
-            </a>
+            </button>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link" id="cheese-tab" data-bs-toggle="tab" href="#cheese" role="tab" aria-controls="cheese" aria-selected="false">
+            <button class="nav-link" id="cheese-tab" data-bs-toggle="tab" href="#cheese" role="tab" aria-controls="cheese"
+               aria-selected="false">
                 <span class="badge bg-secondary">2</span> Cheese and Sauce
-            </a>
+            </button>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link" id="toppings-tab" data-bs-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false">
+            <button class="nav-link" id="toppings-tab" data-bs-toggle="tab" href="#toppings" role="tab"
+               aria-controls="toppings" aria-selected="false">
                 <span class="badge bg-secondary">3</span> Toppings
-            </a>
+            </button>
         </li>
     </ul>
     <!--NAV TAB END-->
@@ -136,9 +139,9 @@
                 </div>
                 <!--CARD FOOTER-->
                 <div class="card-footer bg-secondary bg-opacity-10">
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn-primary">
-                            Next Step >
+                    <div class="d-flex justify-content-end" role="tablist">
+                        <button type="button" class="btn btn-primary">
+                                Next Step >
                         </button>
                     </div>
                 </div>
@@ -212,10 +215,10 @@
                 <!--CARD FOOTER-->
                 <div class="card-footer bg-secondary bg-opacity-10">
                     <div class="d-flex justify-content-end">
-                        <button class="btn-primary" type="button">
+                        <button class="btn btn-primary" type="button">
                             < Previous
                         </button>
-                        <button class="btn-primary" type="button">
+                        <button class="btn btn-primary" type="button">
                             Next >
                         </button>
                     </div>
@@ -294,7 +297,7 @@
                 <!--CARD FOOTER-->
                 <div class="card-footer bg-secondary bg-opacity-10">
                     <div class="d-flex justify-content-end">
-                        <button class="btn-primary" type="submit">
+                        <button class="btn btn-primary" type="submit">
                             Checkout <i class="fa-solid fa-cart-plus"></i>
                         </button>
                     </div>
@@ -304,9 +307,6 @@
     </div>
     <br>
 </div>
-
-
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
