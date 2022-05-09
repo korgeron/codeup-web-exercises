@@ -15,7 +15,7 @@
     list-style: none!important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     .contact-info{
         flex-direction:column;
         text-align: center;
