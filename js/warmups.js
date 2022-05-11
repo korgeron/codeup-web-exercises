@@ -125,48 +125,61 @@ console.log("Yay! I completed the warm-up!");
 // console.log(returnProductEssentialDetails(product3));
 
 
-const hamsters = [
-    {
-        name: "Hamtaro",
-        heightInMM: 86,
-        fur: ['orange', 'white'],
-        gender: "male",
-        dateOfBirth: "August 6"
-    } , {
-        name: "Bijou",
-        heightInMM: 75,
-        fur: ['white'],
-        gender: "female",
-        dateOfBirth: "July 10"
-    } , {
-        name: "Oxnard",
-        heightInMM: 100,
-        fur: ['grey', 'white'],
-        gender: "male",
-        dateOfBirth: "May 3"
-    } , {
-        name: "Boss",
-        heightInMM: 120,
-        fur: ['brown', 'white'],
-        gender: "male",
-        dateOfBirth: "Spetember 21"
-    } , {
-        name: "Snoozer",
-        heightInMM: 85,
-        fur: ['brown', 'white', "pink"],
-        gender: "male",
-        dateOfBirth: "January 14"
-    }
-];
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "Spetember 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+//
+// function isTallestObject (input) {
+//  let tallest = {heightInMM: 0}
+//     for (let hamster of input){
+//         if (hamster.heightInMM > tallest.heightInMM){
+//              tallest = hamster
+//         }
+//     }
+//             return tallest
+// }
+//
+// console.log(isTallestObject(hamsters));
 
-function isTallestObject (input) {
- let tallest = {heightInMM: 0}
-    for (let hamster of input){
-        if (hamster.heightInMM > tallest.heightInMM){
-             tallest = hamster
-        }
-    }
-            return tallest
+
+function makeObjectFromString (str) {
+const obj = {}
+    obj.string = str;
+    obj.size = str.length;
+    obj.isOneWord = str.indexOf(' ') < 0;
+    let lc = str.toLowerCase();
+        obj.containsLetterFromRSTLNE = lc.includes('r' || lc.includes('s' || lc.includes('t' || lc.includes('l' || lc.includes('n' || lc.includes('e'))))));
+            return obj;
 }
 
-console.log(isTallestObject(hamsters));
+console.log(makeObjectFromString('kevin'));
