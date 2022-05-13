@@ -49,3 +49,12 @@
 //
 // }
 // getsOlder(dogObject);
+
+//TODO: THIS FUNCTION ADDS NUMBERS OF OBJECT AND RETURNS THE SUM
+// function sumOfObject(x){
+//     let bucket = 0;
+//     for (let i = 0; i < x.length; i++){
+//         bucket += x[i];
+//     }
+//     return bucket;
+// }
