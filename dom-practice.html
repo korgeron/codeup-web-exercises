@@ -17,7 +17,7 @@
     </style>
 </head>
 
-<body>
+<body class="my-bg-color">
 
 <h1>Lets practice DOM!</h1>
 
@@ -25,6 +25,7 @@
     <h1>Question 0</h1>
     <p>Lorem ipsum dolor sit amet.</p>
 </div>
+
 <div class="question">
     <h1>Question 1</h1>
     <input type="color" id="color">
@@ -64,9 +65,13 @@
     <button id="submitString">Add</button>
     <p id="madLib">Hello</p>
 </div>
+
+
+
+
 <script>
 
-    // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
+// TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
 
     let answer = prompt('Choose a color.');
     let div1 = document.getElementsByClassName('question') [0];
@@ -74,6 +79,14 @@
     console.log(document.getElementsByClassName('question'));
     div1.style.color = answer;
 
+//TODO: Adding event listener to button (Question 1)
+let colorShown = document.querySelector('#color');
+let colorPicked = document.querySelector('.my-bg-color');
+let changeColor = function (){
+    colorPicked.style.backgroundColor = colorShown.value;
+}
+let answer1 = document.querySelector('#changeColor');
+answer1.addEventListener('click', changeColor);
 
 </script>
 </body>
