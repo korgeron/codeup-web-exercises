@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Jquery Exercises</title>
 </head>
 <body>
+<div>
+    <h1 id="codeup" class="codeup">This is my H1 element</h1>
+    <p id="textId" class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam dolor dolorem dolores eaque eligendi eveniet hic ipsum iure modi, mollitia natus nisi, quasi quisquam, repellat soluta tempore ullam! Quis.</p>
+    <ul class="codeup">
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+    </ul>
 
+</div>
 
 
 
@@ -15,12 +24,18 @@
 
 <script>
     $(function (){
-        alert('Yay it finally loaded!');
+        //ID SELECTORS
+    //     alert('Yay it finally loaded!');
+    //     $('#codeup').html(alert(document.querySelector('#codeup').innerHTML));
+    //     $('#textId').html(alert(document.querySelector('#textId').innerHTML));
+        //CLASS SELECTORS
+        // $('.codeup').css('border', 'red 1px solid');
+        //ELEMENT SELECTORS
+        $('li, h1, p').css('background', 'yellow');
+        $('li').css('font-size', '20px');
+        $('h1').html(alert(document.querySelector('h1').innerHTML));
 
     });
-
-
-
 </script>
 </body>
 </html>
