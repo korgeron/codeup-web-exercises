@@ -37,6 +37,9 @@
     <input type="text" id="todo">
     <button type="button" id="addTodo">Add Todo</button>
     <ul id="todosList">
+        <li>Todo 1</li>
+        <li>Todo 2</li>
+        <li>Todo 3</li>
     </ul>
 </div>
 
@@ -68,25 +71,39 @@
 
 
 
-
 <script>
 
 // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
 
-    let answer = prompt('Choose a color.');
-    let div1 = document.getElementsByClassName('question') [0];
-
-    console.log(document.getElementsByClassName('question'));
-    div1.style.color = answer;
+    // let answer = prompt('Choose a color.');
+    // let div1 = document.getElementsByClassName('question') [0];
+    //
+    // console.log(document.getElementsByClassName('question'));
+    // div1.style.color = answer;
 
 //TODO: Adding event listener to button (Question 1)
-let colorShown = document.querySelector('#color');
-let colorPicked = document.querySelector('.my-bg-color');
-let changeColor = function (){
-    colorPicked.style.backgroundColor = colorShown.value;
+// let colorShown = document.querySelector('#color');
+// let colorPicked = document.querySelector('.my-bg-color');
+// let answer1 = document.querySelector('#changeColor');
+// let changeColor = function (){
+//     colorPicked.style.backgroundColor = colorShown.value;
+// }
+// answer1.addEventListener('click', changeColor);
+
+//TODO: Question 2
+let todoInput = document.querySelector('#todo');
+let todoList = document.querySelector('#todosList');
+let todoBtn = document.querySelector('#addTodo');
+let addingTodo = function (){
+    if (todoInput.value !== ''){
+        let str = "<li>" + todoInput.value + "</li>";
+        todoList.innerHTML += str;
+        todoInput.value = "";
+     }
 }
-let answer1 = document.querySelector('#changeColor');
-answer1.addEventListener('click', changeColor);
+todoBtn.addEventListener('click', addingTodo);
+
+
 
 </script>
 </body>
