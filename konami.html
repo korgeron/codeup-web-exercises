@@ -15,17 +15,13 @@ $(function () {
 "use strict";
 
         let bucket = [];
-        let cheatCode = ['ArrowUp','ArrowUp'];
     $(document).keyup(function (event) {
         bucket.push(event.key);
         let str = bucket.toString();
         console.log(str);
         if (str === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b'){
-            alert('CHEATER!!');
-            console.log('CHEATER');
+            alert('You have added 30 lives!');
         }
-
-
     });
 
 
