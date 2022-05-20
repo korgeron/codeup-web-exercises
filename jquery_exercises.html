@@ -31,10 +31,25 @@
         //CLASS SELECTORS
         // $('.codeup').css('border', 'red 1px solid');
         //ELEMENT SELECTORS
-        $('li, h1, p').css('background', 'yellow');
-        $('li').css('font-size', '20px');
-        $('h1').html(alert(document.querySelector('h1').innerHTML));
+        // $('li, h1, p').css('background', 'yellow');
+        // $('li').css('font-size', '20px');
+        // $('h1').html(alert(document.querySelector('h1').innerHTML));
 
+        //CLICK EVENT
+        $('h1').click(function (){
+            $(this).css('background', 'red');
+        });
+        $('p').dblclick(function (){
+            $(this).css('font-size', '18px')
+        });
+
+        $('li').hover(
+            function (){
+                $(this).css('color', 'red');
+            }, function (){
+                $(this).css('color', 'black');
+            }
+        );
     });
 </script>
 </body>
