@@ -4,31 +4,31 @@
     <title>Konami Code</title>
 </head>
 <body>
+<audio id="my-audio" src="audio/mixkit-fairy-arcade-sparkle-866.wav"></audio>
 <h1>Konami Code</h1>
-
+<h3 id="my-alert">You have added 30 lives!!</h3>
+<h2 id="lives">LIFE: 1</h2>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
 
 <script>
-$(function () {
-"use strict";
-
+    $(function () {
+        "use strict";
+        $('#my-alert').css('display','none');
         let bucket = [];
-    $(document).keyup(function (event) {
-        bucket.push(event.key);
-        let str = bucket.toString();
-        console.log(str);
-        if (str === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b'){
-            alert('You have added 30 lives!');
-        }
+        $(document).keyup(function (event) {
+            bucket.push(event.key);
+            let str = bucket.toString();
+            console.log(str);
+            if (str === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {
+                $('body').css('background','lightgreen');
+                $('#lives').html('LIFE: 30');
+                $('#my-alert').css('display','block');
+                $('#my-audio')[0].play();
+            }
+        });
     });
-
-
-
-
-
-});
 
 
 </script>
