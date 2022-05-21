@@ -37,7 +37,7 @@ $(function () {
                     }
             }, 1000)
         }
-
+        $('.my-keys').html(event.key);
 
         console.log(bucket);
     });
