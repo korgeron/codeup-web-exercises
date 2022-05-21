@@ -8,7 +8,6 @@ $(function () {
     $(document).keyup(function (event) {
         bucket.push(event.key);
         let str = bucket.toString();
-        // console.log(str);
         if (str === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {
             life += 30;
             $('body').css('background', 'lightgreen');
@@ -24,7 +23,6 @@ $(function () {
             }
         }
         if (str.length >= 81 && str !== 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {
-            console.log('clearing bucket timer for wrong konami code event');
             $('#audio-recharge')[0].play();
             return bucket = [];
         }
@@ -42,12 +40,9 @@ $(function () {
                         setTimeout(function (){
                             $('window').html(location.reload());
                         }, 3000)
-
                     }
             }, 1000)
         }
         $('.my-keys').html(event.key);
-
-        console.log(bucket);
     });
 });
