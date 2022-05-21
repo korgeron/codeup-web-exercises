@@ -1,0 +1,16 @@
+.gameboy-background{
+    background-image: url(../img/gameboy.jpeg);
+    background-size: cover;
+    height: 500px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.life-class{
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.text-alert{
+/* FOR THE ALERT OF 30 LIVES ADDED */
+}
