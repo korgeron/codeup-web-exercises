@@ -27,20 +27,20 @@ $(function () {
             return bucket = [];
         }
         if (life > 1) {
-           let subtractLife = setInterval(function () {
+            let subtractLife = setInterval(function () {
                 console.log('take away life timer');
                 life -= 1;
                 $('.life-class').html('LIFE: ' + life);
-                    if ( life < 0){
-                        $('document').off(event);
-                        clearInterval(subtractLife);
-                        let sayDead = 'DEAD'
-                        $('.life-class').css('color', 'red').html('LIFE: ' + sayDead);
-                        $('#audio-game-over')[0].play();
-                        setTimeout(function (){
-                            $('window').html(location.reload());
-                        }, 3000)
-                    }
+                if (life < 0) {
+                    $('document').off(event);
+                    clearInterval(subtractLife);
+                    let sayDead = 'DEAD'
+                    $('.life-class').css('color', 'red').html('LIFE: ' + sayDead);
+                    $('#audio-game-over')[0].play();
+                    setTimeout(function () {
+                        $('window').html(location.reload());
+                    }, 3000)
+                }
             }, 1000)
         }
         $('.my-keys').html(event.key);
