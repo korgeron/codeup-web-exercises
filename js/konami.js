@@ -34,8 +34,8 @@ $(function () {
                 if (life < 0) {
                     $('document').off(event);
                     clearInterval(subtractLife);
-                    let sayDead = 'DEAD'
-                    $('.life-class').css('color', 'red').html('LIFE: ' + sayDead);
+                    let sayDead = 'YOU DIED!'
+                    $('.life-class').css('color', 'orange').html(sayDead);
                     $('#audio-game-over')[0].play();
                     setTimeout(function () {
                         $('window').html(location.reload());
