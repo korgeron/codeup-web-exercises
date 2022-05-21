@@ -26,10 +26,15 @@ $(function () {
             return bucket = [];
         }
         if (life > 1) {
-            setInterval(function () {
+           let test = setInterval(function () {
                 console.log('take away life timer');
                 life -= 1;
                 $('.life-class').html('LIFE: ' + life);
+                    if ( life < 0){
+                        clearInterval(test);
+                        let sayDead = 'DEAD'
+                        $('.life-class').css('color', 'red').html('LIFE: ' + sayDead);
+                    }
             }, 1000)
         }
 
