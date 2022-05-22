@@ -13,7 +13,12 @@ $(function () {
         if (str === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {
             life += 30;  //IF CORRECT CODE ENTERED THEN ADDED 30 LIVES
             level += 1; // ADDS NEXT LEVEL TO GAMEBOY
-            $('.current-level').html('lv: ' + level);
+            $('.current-level').html('lv: ' + level); //ADDING WIN CAPABILITIES / FUNCTIONALITY
+                if (level === 6){ //WIN FUNCTIONALITY
+                    $('document').off(event);
+                    $('#audio-game-won')[0].play();
+
+                }
             $('body').css('background', 'lightgreen');
             $('#lives').html('LIFE: ' + life);
             $('#my-audio')[0].play();
@@ -34,6 +39,13 @@ $(function () {
                 console.log('take away life timer');
                 life -= 1;
                 $('.life-class').html('LIFE: ' + life);
+                if (level === 6){ //WIN FUNCTIONALITY
+                    clearInterval(subtractLife);
+                    $('#lives').html('YOU WIN!');
+                    setTimeout(function () {
+                        $('window').html(location.reload());
+                    }, 5000)
+                }
                 if (life < 0) { //DEATH EVENT / REFRESH PAGE EVENT
                     $('document').off(event);
                     clearInterval(subtractLife);
