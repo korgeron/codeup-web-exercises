@@ -14,11 +14,7 @@ $(function () {
             life += 30;  //IF CORRECT CODE ENTERED THEN ADDED 30 LIVES
             level += 1; // ADDS NEXT LEVEL TO GAMEBOY
             $('.current-level').html('lv: ' + level); //ADDING WIN CAPABILITIES / FUNCTIONALITY
-                if (level === 6){ //WIN FUNCTIONALITY
-                    $('document').off(event);
-                    $('#audio-game-won')[0].play();
 
-                }
             $('body').css('background', 'lightgreen');
             $('#lives').html('LIFE: ' + life);
             $('#my-audio')[0].play();
@@ -40,11 +36,13 @@ $(function () {
                 life -= 1;
                 $('.life-class').html('LIFE: ' + life);
                 if (level === 6){ //WIN FUNCTIONALITY
+                    $('document').off(event);
+                    $('#audio-game-won')[0].play();
                     clearInterval(subtractLife);
-                    $('#lives').html('YOU WIN!');
+                    $('#lives').css('color','rgba(245,191,8,0.61)').html('YOU WIN!');
                     setTimeout(function () {
                         $('window').html(location.reload());
-                    }, 5000)
+                    }, 5000) //TIMER FOR PAGE RELOAD EVENT ON WIN
                 }
                 if (life < 0) { //DEATH EVENT / REFRESH PAGE EVENT
                     $('document').off(event);
@@ -54,11 +52,10 @@ $(function () {
                     $('#audio-game-over')[0].play();
                     setTimeout(function () {
                         $('window').html(location.reload());
-                    }, 3000) //TIMER FOR PAGE RELOAD EVENT
+                    }, 3000) //TIMER FOR PAGE RELOAD EVENT ON LOSS
                 }
             }, 1000) //1000
         }
         $('.my-keys').html(event.key); //SHOWS WHAT KEYS HAVE BEEN PRESSED
-        // $('.current-level').html('level: ' + level);
     });
 });
