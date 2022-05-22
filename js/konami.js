@@ -1,37 +1,36 @@
 $(function () {
     "use strict";
-    $('.text-alert').css('color', 'rgb(0,0,0,0)');
+    $('.text-alert').css('color', 'rgb(0,0,0,0)');   //SETS ALERT TEXT TO INVISIBLE
     let life = 0;
     let bucket = [];
     $('.life-class').html('LIFE: ' + (life + 1));
 
     $(document).keyup(function (event) {
-        bucket.push(event.key);
+        bucket.push(event.key);    //PUSHES KEYS PRESSED TO THE BUCKET
         let str = bucket.toString();
         if (str === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {
-            life += 30;
+            life += 30;  //IF CORRECT CODE ENTERED THEN ADDED 30 LIVES
             $('body').css('background', 'lightgreen');
             $('#lives').html('LIFE: ' + life);
-            $('#my-alert').css('color', 'black');
             $('#my-audio')[0].play();
             bucket = [];
-            if ($('#my-alert').css('color', 'red')) {
+            if ($('#my-alert').css('color', 'red')) { //SETS WORDS TO RED AND THEN SETS TIMER
                 setTimeout(function () {
                     $('.text-alert').css('color', 'rgb(0,0,0,0)');
                     $('body').css('background', 'white');
                 }, 1500)
             }
         }
-        if (str.length >= 81 && str !== 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {
+        if (str.length >= 81 && str !== 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {  //IF CODE DOESNT EQUAL DESIRED CODE IT RESETS THE BUCKET AND PLAYS THE RESET AUDIO
             $('#audio-recharge')[0].play();
             return bucket = [];
         }
-        if (life > 1) {
+        if (life > 1) { //THIS SUBTRACTS THE LIFE OVER TIME / ALSO SPEEDS UP OVER TIME
             let subtractLife = setInterval(function () {
                 console.log('take away life timer');
                 life -= 1;
                 $('.life-class').html('LIFE: ' + life);
-                if (life < 0) {
+                if (life < 0) { //DEATH EVENT / REFRESH PAGE EVENT
                     $('document').off(event);
                     clearInterval(subtractLife);
                     let sayDead = 'YOU DIED!'
@@ -43,6 +42,6 @@ $(function () {
                 }
             }, 1000)
         }
-        $('.my-keys').html(event.key);
+        $('.my-keys').html(event.key); //SHOWS WHAT KEYS HAVE BEEN PRESSED
     });
 });
