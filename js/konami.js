@@ -2,6 +2,8 @@ $(function () {
     "use strict";
     $('.text-alert').css('color', 'rgb(0,0,0,0)');   //SETS ALERT TEXT TO INVISIBLE
     let life = 0;
+    let level = 1;
+    $('.current-level').html('lv: ' + level);  //SETS CURRENT LEVEL
     let bucket = [];
     $('.life-class').html('LIFE: ' + (life + 1));
 
@@ -10,6 +12,8 @@ $(function () {
         let str = bucket.toString();
         if (str === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {
             life += 30;  //IF CORRECT CODE ENTERED THEN ADDED 30 LIVES
+            level += 1; // ADDS NEXT LEVEL TO GAMEBOY
+            $('.current-level').html('lv: ' + level);
             $('body').css('background', 'lightgreen');
             $('#lives').html('LIFE: ' + life);
             $('#my-audio')[0].play();
@@ -18,7 +22,7 @@ $(function () {
                 setTimeout(function () {
                     $('.text-alert').css('color', 'rgb(0,0,0,0)');
                     $('body').css('background', 'white');
-                }, 1500)
+                }, 1500) //TIMER FOR ALERT FADE
             }
         }
         if (str.length >= 81 && str !== 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {  //IF CODE DOESNT EQUAL DESIRED CODE IT RESETS THE BUCKET AND PLAYS THE RESET AUDIO
@@ -38,10 +42,11 @@ $(function () {
                     $('#audio-game-over')[0].play();
                     setTimeout(function () {
                         $('window').html(location.reload());
-                    }, 3000)
+                    }, 3000) //TIMER FOR PAGE RELOAD EVENT
                 }
-            }, 1000)
+            }, 1000) //1000
         }
         $('.my-keys').html(event.key); //SHOWS WHAT KEYS HAVE BEEN PRESSED
+        // $('.current-level').html('level: ' + level);
     });
 });

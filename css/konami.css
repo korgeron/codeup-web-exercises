@@ -18,3 +18,9 @@
     position: absolute;
     padding-top: 16rem;
 }
+
+.current-level{
+    position: absolute;
+    padding-top: 5rem;
+    padding-left: 4rem;
+}
