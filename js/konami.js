@@ -5,7 +5,7 @@ $(function () {
     $('.text-alert').css('color', 'rgb(0,0,0,0)');   //SETS ALERT TEXT TO INVISIBLE
     let life = 0;
     let level = 0;
-    $('.current-level').html('lv: ' + level);  //SETS CURRENT LEVEL
+    $('.current-level').html('lv: ' + level).css('color', 'rgb(0,0,0,0)');  //SETS CURRENT LEVEL
     let bucket = [];
     $('.life-class').html('LIFE: ' + (life + 1)); //SETS LIFE TO STARTING VALUE
 
@@ -16,7 +16,7 @@ $(function () {
             $('#my-audio')[0].play(); //AUDIO FOR CORRECT INPUT
             life += 30;  //IF CORRECT CODE ENTERED THEN ADDED 30 LIVES
             level += 1; // ADDS NEXT LEVEL TO GAMEBOY
-            $('.current-level').html('lv: ' + level); //ADDING WIN CAPABILITIES / FUNCTIONALITY
+            $('.current-level').html('lv: ' + level).css('color','black'); //ADDING WIN CAPABILITIES / FUNCTIONALITY
             $('body').css('background', 'lightgreen');
             $('#lives').html('LIFE: ' + life);
             bucket = [];
