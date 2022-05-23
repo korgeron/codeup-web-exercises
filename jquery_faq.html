@@ -5,20 +5,28 @@
     <title>10 questions</title>
 
     <style>
-        .invisible{
+        .invisible {
             visibility: hidden;
         }
-        .highlight{
+
+        .highlight {
             background: yellow;
             width: fit-content;
+        }
+
+        .bold-that-font {
+            font-weight: bold;
+        }
+
+        .change-to-blue {
+            color: blue;
         }
     </style>
 
 
-
 </head>
 <body>
-
+<button id="toggle-visible" type="button">Show Answers</button>
 <dl>
     <dt>1) Who is the director of the National Park Service?</dt>
     <dd>Charles F. "Chuck" Sams III</dd>
@@ -66,28 +74,74 @@
     <dd>FY 2017 Enacted: $2.932 billion</dd>
 </dl>
 
-<button id="toggle-visible" type="button">Show Answers</button>
+<button id="facts-button">Click Me!!!</button>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<h3 id="smokey-mtns">Great Smoky Mountains National Park</h3>
+<ul class="smokey">
+    <li>Most Visited National Park in the United States.</li>
+    <li>More than 800 Miles of Hiking Trails.</li>
+    <li>Some of the Oldest Mountains in the World.</li>
+    <li>Fact 4 (the man left behind)</li>
+</ul>
+<h3 id="zion-prk">Zion National Park</h3>
+<ul class="zion">
+    <li>Utah’s first national park.</li>
+    <li>Over 220 square miles of explorable land.</li>
+    <li>The home of Zion Canyon! Which is 15 miles long and in some parts half a mile deep.</li>
+    <li>Fact 4 (the one not forgotten)</li>
+</ul>
+<h3 id="yellow-stn">Yellowstone National Park </h3>
+<ul class="yellow-stn">
+    <li>Encompasses over 2 million acres and boasts more than 900 miles of hiking trails.</li>
+    <li>Over 67 species of mammals and 330 species of birds within the park!</li>
+    <li>Is the first established national park in the United States.</li>
+    <li>Fact 4 (yea... I did forget there needed to be four)</li>
+</ul>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
 <script>
     //ADDS / HIDES DD ELEMENTS WHEN BUTTON IS CLICKED
     $('dd').addClass('invisible');
-    $('#toggle-visible').click(function (){
-        if ($('dd').hasClass('invisible')){
+    $('#toggle-visible').click(function () {
+        if ($('dd').hasClass('invisible')) {
             $('dd').removeClass('invisible');
         } else {
             $('dd').addClass('invisible');
         }
     });
 
-    //HIGHLIGHTS DT ELEMENT WHEN CLICKED
-    $('dt').click(function (){
-        if ($(this).hasClass('highlight')){
+    //HIGHLIGHTS <dt> ELEMENT WHEN CLICKED
+    $('dt').click(function () {
+        if ($(this).hasClass('highlight')) {
             $(this).removeClass('highlight');
         } else {
             $(this).addClass('highlight');
         }
     })
+
+    //HIGHLIGHTS LAST <li> ELEMENT
+    $('#facts-button').click(function () {
+        $('ul').each(function () {
+            if ($(this).children().last().hasClass('highlight')) {
+                $(this).children().last().removeClass('highlight');
+            } else {
+                $(this).children().last().addClass('highlight');
+            }
+        })
+    });
+
+    //WHEN <h3> IS CLICKED <li> FONT IS BOLDED
+    $('h3').click(function (){
+        $(this).next().toggleClass('bold-that-font');
+    });
+
+    //FIRST <li> CHANGED BLUE WHEN ANY LI OF PARENT <ul> IS CLICKED
+    $('ul').click(function (){
+        $(this).children().first().toggleClass('change-to-blue');
+    });
+
 
 </script>
 </body>
