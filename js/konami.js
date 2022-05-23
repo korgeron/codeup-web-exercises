@@ -4,7 +4,7 @@ $(function () {
     "use strict";
     $('.text-alert').css('color', 'rgb(0,0,0,0)');   //SETS ALERT TEXT TO INVISIBLE
     let life = 0;
-    let level = 1;
+    let level = 0;
     $('.current-level').html('lv: ' + level);  //SETS CURRENT LEVEL
     let bucket = [];
     $('.life-class').html('LIFE: ' + (life + 1)); //SETS LIFE TO STARTING VALUE
@@ -13,12 +13,12 @@ $(function () {
         bucket.push(event.key);    //PUSHES KEYS PRESSED TO THE BUCKET
         let str = bucket.toString().toLowerCase(); //WAS HAVING ISSUES USING VALUES SO CONVERTED TO A STRING
         if (str === 'arrowup,arrowup,arrowdown,arrowdown,arrowleft,arrowright,arrowleft,arrowright,a,b') {
+            $('#my-audio')[0].play(); //AUDIO FOR CORRECT INPUT
             life += 30;  //IF CORRECT CODE ENTERED THEN ADDED 30 LIVES
             level += 1; // ADDS NEXT LEVEL TO GAMEBOY
             $('.current-level').html('lv: ' + level); //ADDING WIN CAPABILITIES / FUNCTIONALITY
             $('body').css('background', 'lightgreen');
             $('#lives').html('LIFE: ' + life);
-            $('#my-audio')[0].play();
             bucket = [];
             if ($('#my-alert').css('color', 'red')) { //SETS WORDS TO RED AND THEN SETS TIMER
                 setTimeout(function () {
@@ -36,12 +36,12 @@ $(function () {
                 console.log('take away life timer');
                 life -= 1;
                 $('.life-class').html('LIFE: ' + life);
-                if (level === 6){ //WIN FUNCTIONALITY
+                if (level === 6) { //WIN FUNCTIONALITY
                     life = 1; //THIS FIXED ISSUE OF BOTH WIN AND LOSS SOUNDS PLAYING ON WIN
                     $('document').off(event);
                     $('#audio-game-won')[0].play();
                     clearInterval(subtractLife);
-                    $('#lives').css('color','rgba(245,191,8,0.61)').html('YOU WIN!');
+                    $('#lives').css('color', 'rgba(245,191,8,0.61)').html('YOU WIN!');
                     setTimeout(function () {
                         $('window').html(location.reload());
                     }, 5000) //TIMER FOR PAGE RELOAD EVENT ON WIN
