@@ -172,14 +172,17 @@ console.log("Yay! I completed the warm-up!");
 // console.log(isTallestObject(hamsters));
 
 
-function makeObjectFromString (str) {
-const obj = {}
-    obj.string = str;
-    obj.size = str.length;
-    obj.isOneWord = str.indexOf(' ') < 0;
-    let lc = str.toLowerCase();
-        obj.containsLetterFromRSTLNE = lc.includes('r' || lc.includes('s' || lc.includes('t' || lc.includes('l' || lc.includes('n' || lc.includes('e'))))));
-            return obj;
-}
+// function makeObjectFromString (str) {
+// const obj = {}
+//     obj.string = str;
+//     obj.size = str.length;
+//     obj.isOneWord = str.indexOf(' ') < 0;
+//     let lc = str.toLowerCase();
+//         obj.containsLetterFromRSTLNE = lc.includes('r' || lc.includes('s' || lc.includes('t' || lc.includes('l' || lc.includes('n' || lc.includes('e'))))));
+//             return obj;
+// }
+//
+// console.log(makeObjectFromString('kevin'));
 
-console.log(makeObjectFromString('kevin'));
+
+

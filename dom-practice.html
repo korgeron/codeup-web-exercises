@@ -70,10 +70,11 @@
 </div>
 
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
 <script>
 
-// TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
+    // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
 
     // let answer = prompt('Choose a color.');
     // let div1 = document.getElementsByClassName('question') [0];
@@ -81,27 +82,80 @@
     // console.log(document.getElementsByClassName('question'));
     // div1.style.color = answer;
 
-//TODO: Adding event listener to button (Question 1)
-// let colorShown = document.querySelector('#color');
-// let colorPicked = document.querySelector('.my-bg-color');
-// let answer1 = document.querySelector('#changeColor');
-// let changeColor = function (){
-//     colorPicked.style.backgroundColor = colorShown.value;
-// }
-// answer1.addEventListener('click', changeColor);
+    //TODO: Adding event listener to button (Question 1)
+    // let colorShown = document.querySelector('#color');
+    // let colorPicked = document.querySelector('.my-bg-color');
+    // let answer1 = document.querySelector('#changeColor');
+    // let changeColor = function (){
+    //     colorPicked.style.backgroundColor = colorShown.value;
+    // }
+    // answer1.addEventListener('click', changeColor);
 
-//TODO: Question 2
-let todoInput = document.querySelector('#todo');
-let todoList = document.querySelector('#todosList');
-let todoBtn = document.querySelector('#addTodo');
-let addingTodo = function (){
-    if (todoInput.value !== ''){
-        let str = "<li>" + todoInput.value + "</li>";
-        todoList.innerHTML += str;
-        todoInput.value = "";
-     }
-}
-todoBtn.addEventListener('click', addingTodo);
+    //TODO: Question 2
+    // let todoInput = document.querySelector('#todo');
+    // let todoList = document.querySelector('#todosList');
+    // let todoBtn = document.querySelector('#addTodo');
+    // let addingTodo = function (){
+    //     if (todoInput.value !== ''){
+    //         let str = "<li>" + todoInput.value + "</li>";
+    //         todoList.innerHTML += str;
+    //         todoInput.value = "";
+    //      }
+    // }
+    // todoBtn.addEventListener('click', addingTodo);
+
+    //TODO: QUESTION #3
+    // Part 1:
+    // Every 1 seconds take the H1 tags and change the font size to 10px.
+    // If its already 10px set it to 20px;
+    // Part 2:
+    // Add a toggle button with id of "toggleH1"
+    // use that button to stop and restart the h1 tags from changing size.
+
+//MY WORK / UNFINISHED
+    // $('#toggleH1').dblclick(function () {
+    //
+    //     let toggleH1 = setInterval(function () {
+    //         setTimeout(function () {
+    //             $('h1').css('font-size', '10px');
+    //         }, 1000);
+    //         setTimeout(function () {
+    //             $('h1').css('font-size', '20px');
+    //         }, 0)
+    //     }, 1500);
+    //
+    //     $('#toggleH1').click(function () {
+    //         clearInterval(toggleH1);
+    //     });
+    // });
+//TODO: WALKTHROUGH question 3
+// const toggleBtn = $('#toggleH1');
+//     function toggleFont () {
+//     let h1s = $('h1');
+//     h1s.each(function (){
+//         if ($(this).css('font-size') !== '10px'){
+//             $(this).css('font-size', '10px');
+//         } else {
+//             $(this).css('font-size', '20px');
+//         }
+//     })
+// }
+// let intervalId = setInterval(toggleFont, 1000);
+//     toggleBtn.click(function (){
+//     if (intervalId === null){
+//         intervalId = setInterval(toggleFont, 1000);
+//     } else  {
+//         clearInterval(intervalId);
+//         intervalId = null;
+//     }
+// })
+
+
+
+
+
+
+
 
 
 
