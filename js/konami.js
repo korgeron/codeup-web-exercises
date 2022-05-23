@@ -1,3 +1,5 @@
+//BUGS TO FIX//
+//(1) DOESN'T PLAY SOUND EFFECTS EVERY TIME FOR CORRECT INPUT
 $(function () {
     "use strict";
     $('.text-alert').css('color', 'rgb(0,0,0,0)');   //SETS ALERT TEXT TO INVISIBLE
@@ -9,8 +11,8 @@ $(function () {
 
     $(document).keyup(function (event) {
         bucket.push(event.key);    //PUSHES KEYS PRESSED TO THE BUCKET
-        let str = bucket.toString(); //WAS HAVING ISSUES USING VALUES SO CONVERTED TO A STRING
-        if (str === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {
+        let str = bucket.toString().toLowerCase(); //WAS HAVING ISSUES USING VALUES SO CONVERTED TO A STRING
+        if (str === 'arrowup,arrowup,arrowdown,arrowdown,arrowleft,arrowright,arrowleft,arrowright,a,b') {
             life += 30;  //IF CORRECT CODE ENTERED THEN ADDED 30 LIVES
             level += 1; // ADDS NEXT LEVEL TO GAMEBOY
             $('.current-level').html('lv: ' + level); //ADDING WIN CAPABILITIES / FUNCTIONALITY
@@ -25,7 +27,7 @@ $(function () {
                 }, 1500) //TIMER FOR ALERT FADE
             }
         }
-        if (str.length >= 81 && str !== 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,a,b') {  //IF CODE DOESNT EQUAL DESIRED CODE IT RESETS THE BUCKET AND PLAYS THE RESET AUDIO
+        if (str.length >= 81 && str !== 'arrowup,arrowup,arrowdown,arrowdown,arrowleft,arrowright,arrowleft,arrowright,a,b') {  //IF CODE DOESNT EQUAL DESIRED CODE IT RESETS THE BUCKET AND PLAYS THE RESET AUDIO
             $('#audio-recharge')[0].play();
             return bucket = [];
         }
