@@ -1,4 +1,8 @@
 $(function () {
+    $('#img-one').addClass('my-img-one');
+    $('#img-two').addClass('my-img-two');
+    $('#img-three').addClass('my-img-three');
+
 //CLICK FUNCTION FOR FIRST CARD NEXT BUTTON
     $('#btn-nxt-card-1').click(function () {
         if ($('#img-three').hasClass('my-img-two')) {
