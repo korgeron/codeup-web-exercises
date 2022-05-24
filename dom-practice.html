@@ -44,7 +44,7 @@
 </div>
 
 
-<div class="question my-alert">
+<div class="question">
     <h1>Question 3</h1>
     <p>All these H1 Tags should be changing size!</p>
     <button id="toggleH1">Toggle!</button>
@@ -150,7 +150,7 @@
 //     }
 // })
 
-$('.my-alert').hover(function (){
+$('.question:nth-child(5)').hover(function (){
     $(this).html(alert('CONGRATULATIONS ON YOUR NEW CRUISE!'));
 }, function (){
     $(this).html();
