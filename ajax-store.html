@@ -29,28 +29,30 @@
 <script>
     (function () {
         "use strict";
-        // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $('#my-btn').click(function (){
-     return fetchData();
-    });
-    function fetchData(){
-        $.ajax({
-            url: ('data/inventory.json'),
-            method: 'GET'
-        }).done(function (data){
-            console.log(data);
-            let str = '';
-            for (let i = 0; i < data.length; i++){
-                console.log(data[i]);
-                str += '<th >' + data[i].title + '</th>';
-                str += '<th >' + data[i].quantity + '</th>';
-                str += '<th >' + "$" + data[i].price + '</th>';
-                str += '<th >' + data[i].categories + '</th>'
-            }
-                $('#products').append(str);
-        })
-    }
 
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+
+        function fetchData() {
+            $.ajax({
+                url: ('data/inventory.json'),
+                method: 'GET'
+            }).done(function (data) {
+                $("#insertProducts").html('');
+                let str = '';
+                for (let i = 0; i < data.length; i++) {
+                    str += '<tr class="test-me-out">' + '<th  style="border: 1px solid green">' + data[i].title + '</th>';
+                    str += '<th  style="padding: 1px">' + data[i].quantity + '</th>';
+                    str += '<th  style="padding: 1px">' + "$" + data[i].price + '</th>';
+                    str += '<th  style="padding: 1px">' + data[i].categories + '</th>' + '</tr>';
+                }
+                $('#insertProducts').append(str);
+            })
+        }
+        fetchData();
+        $('#my-btn').click(function () {
+            fetchData();
+        });
 
 
         // TODO: Take the data from inventory.json and append it to the products table

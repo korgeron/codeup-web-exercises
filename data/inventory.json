@@ -32,11 +32,14 @@
         "price": 10
     },
     {
-        "title": "My Cool New Tool",
+        "title": "New Tool",
         "quantity": 30,
         "categories": [
             "tool"
         ],
-        "price": 100000000
+        "price": 100
+    },
+    {
+        "title": "Test"
     }
 ]
