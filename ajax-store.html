@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>Online Store</title>
+    <style>
+
+
+    </style>
 </head>
 <body>
 
@@ -26,20 +30,28 @@
     (function () {
         "use strict";
         // TODO: Create an AJAX GET request for the file under data/inventory.json
-
-
-        $('#my-btn').click(function () {
-            $.get('data/inventory.json').done(function (info) {
-                for (let i = 0; i < info.length; i++){
-                    console.log(info[i]);
-                $('tr').children('th').first().append('<th>' + info[i].title + '</th>' );
-                }
-
-            })
+    $('#my-btn').click(function (){
+     return fetchData();
+    });
+    function fetchData(){
+        $.ajax({
+            url: ('data/inventory.json'),
+            method: 'GET'
+        }).done(function (data){
+            console.log(data);
+            let str = '';
+            for (let i = 0; i < data.length; i++){
+                console.log(data[i]);
+                str += '<th >' + data[i].title + '</th>';
+                str += '<th >' + data[i].quantity + '</th>';
+                str += '<th >' + "$" + data[i].price + '</th>';
+                str += '<th >' + data[i].categories + '</th>'
+            }
+                $('#products').append(str);
         })
-        $.get('data/inventory.json').done(function (info) {
+    }
 
-        })
+
 
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
