@@ -139,7 +139,7 @@
 
     //FIRST <li> CHANGED BLUE WHEN ANY LI OF PARENT <ul> IS CLICKED
     $('ul').click(function (){
-        $(this).children().first().toggleClass('change-to-blue');
+        $(this).children('li').first().toggleClass('change-to-blue');
     });
 
 
