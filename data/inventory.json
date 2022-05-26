@@ -40,6 +40,11 @@
         "price": 100
     },
     {
-        "title": "Test"
+        "title": "test data",
+        "quantity": 10,
+        "categories": [
+            "test and see"
+        ],
+        "price": 0
     }
 ]

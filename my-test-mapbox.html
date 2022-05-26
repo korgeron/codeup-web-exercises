@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mapbox!</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
+
+</head>
+<body>
+<h1 id="place"></h1>
+<div id='map' style='width: 95vw; height: 75vh; margin: auto'></div>
+<script src="js/keys.js"></script>
+<script src="js/geocode.js"></script>
+<script>
+    //ADDS MAP TO THE WEB PAGE
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    const MAP = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.4252], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+    //ADDS A MARKER TO THE MAP
+    const MARKER = new mapboxgl.Marker()
+        .setLngLat([-98.4896, 29.4269])
+        .setDraggable(true)
+        .addTo(MAP);
+    //modifying the marker to make it able to drag
+    //     .setDraggable()
+
+
+    //SETTING NEW LNG / LAT
+    MARKER.setLngLat([0, 0]);
+    MARKER.setLngLat([-98.4896, 29.4269]);
+    //POP UP FOR WHEN YOU CLICK ON THE MARKER
+    const POPUP = new mapboxgl.Popup()
+        .setHTML('<p>Codeup Rocks!</p>');
+    //SETS THE POPUP TO THE MARKER
+    MARKER.setPopup(POPUP);
+    //ADDING A POPUP TO THE MAP ITSELF
+    const MAP_POPUP = new mapboxgl.Popup()
+            .setLngLat([0,0])
+            .setHTML('<p>This is (0,0)!!!</p>')
+            .addTo(MAP);
+
+//GETTING COORDINATES USING ADDRESS
+    geocode('1510 Polk St, Houston, TX 77003', MAPBOX_API_KEY).then(function (data){
+        console.log(data);
+        const POPUP_TOYOTA = new mapboxgl.Popup()
+            .setHTML('<p>1510 Polk St, Houston, TX 77003</p>')
+            .setLngLat(data)
+            .addTo(MAP);
+    })
+
+//GETTING ADDRESS USING COORDINATES
+    reverseGeocode({lat: 52.3352, lng: 4.8665}, MAPBOX_API_KEY).then(function (location){
+        console.log(location);
+    })
+//FUNCTION FOR WHEN YOU STOP DRAGGING THE MARKER AROUND
+
+let longLat = [];
+    MARKER.on('dragend', function (){
+        longLat = MARKER.getLngLat();
+        MAP.flyTo({center: [longLat.lng, longLat.lat]});
+        reverseGeocode(longLat, MAPBOX_API_KEY).then(function (data){
+            document.querySelector('#place').innerHTML = data;
+        })
+    })
+
+</script>
+</body>
+</html>
