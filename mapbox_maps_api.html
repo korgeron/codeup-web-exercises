@@ -56,69 +56,91 @@
         }
     ];
 
-    restaurants.forEach(function (restaurant) {
+    $('#my-btn').click(function () {
+        let inputVal = $('#my-input').val();
+        if (inputVal === 'all') {
+            MAP.setZoom(3);
+            const HOG_HEAVEN = new mapboxgl.Marker()
+                .setLngLat([-89.89187, 30.65015])
+                .addTo(MAP);
+            const POPUP_HOG_HEAVEN = new mapboxgl.Popup()
+                .setHTML('<p>HOG HEAVEN... <br> the only place in town!</p>');
+            HOG_HEAVEN.setPopup(POPUP_HOG_HEAVEN);
 
-        console.log(restaurant);
-        $('#my-btn').click(function () {
-            let inputVal = $('#my-input').val();
-            console.log(inputVal);
-            if (inputVal === restaurants[0].name) {
-                console.log('hog heaven works!!');
-                const HOG_HEAVEN = new mapboxgl.Marker()
-                    .setLngLat([-89.89187, 30.65015])
-                    .addTo(MAP);
+            const MOMS_HOUSE = new mapboxgl.Marker()
+                .setLngLat([-89.88031, 30.66368])
+                .addTo(MAP);
+            const POPUP_MOMS_HOUSE = new mapboxgl.Popup()
+                .setHTML('<p>MOMS HOUSE... <br> its <strong> FREE! </strong> </p>');
+            MOMS_HOUSE.setPopup(POPUP_MOMS_HOUSE);
 
-                MAP.flyTo({
-                    center: [-89.89187, 30.65015],
-                    zoom: 10,
-                    speed: .5,
-                    curve: 1
-                })
-                const POPUP_HOG_HEAVEN = new mapboxgl.Popup()
-                    .setHTML('<p>HOG HEAVEN... <br> the only place in town!</p>');
-                HOG_HEAVEN.setPopup(POPUP_HOG_HEAVEN);
+            const MY_HOUSE = new mapboxgl.Marker()
+                .setLngLat([-98.579685, 29.52548])
+                .addTo(MAP);
+            const POPUP_MY_HOUSE = new mapboxgl.Popup()
+                .setHTML('<p>MY HOUSE... <br> the best place to be.</p>');
+            MY_HOUSE.setPopup(POPUP_MY_HOUSE);
+        }
+        if (inputVal === restaurants[0].name) {
+            const HOG_HEAVEN = new mapboxgl.Marker()
+                .setLngLat([-89.89187, 30.65015])
+                .addTo(MAP);
+
+            MAP.flyTo({
+                center: [-89.89187, 30.65015],
+                zoom: 10,
+                speed: .5,
+                curve: 1
+            })
+            const POPUP_HOG_HEAVEN = new mapboxgl.Popup()
+                .setHTML('<p>HOG HEAVEN... <br> the only place in town!</p>');
+            HOG_HEAVEN.setPopup(POPUP_HOG_HEAVEN);
+
+            if (MAP.isMoving()) {
+                console.log('flying to hog heaven!');
             }
-            if (inputVal === restaurants[1].name) {
-                console.log('moms house works!');
-                const MOMS_HOUSE = new mapboxgl.Marker()
-                    .setLngLat([-89.88031, 30.66368])
-                    .addTo(MAP);
-                MAP.flyTo({
-                    center: [-89.88031, 30.66368],
-                    zoom: 10,
-                    speed: .5,
-                    curve: 1
-                })
-                const POPUP_MOMS_HOUSE = new mapboxgl.Popup()
-                    .setHTML('<p>MOMS HOUSE... <br> its <strong> FREE! </strong> </p>');
-                MOMS_HOUSE.setPopup(POPUP_MOMS_HOUSE);
+        }
+        if (inputVal === restaurants[1].name) {
+            const MOMS_HOUSE = new mapboxgl.Marker()
+                .setLngLat([-89.88031, 30.66368])
+                .addTo(MAP);
+            MAP.flyTo({
+                center: [-89.88031, 30.66368],
+                zoom: 10,
+                speed: .5,
+                curve: 1
+            })
+            const POPUP_MOMS_HOUSE = new mapboxgl.Popup()
+                .setHTML('<p>MOMS HOUSE... <br> its <strong> FREE! </strong> </p>');
+            MOMS_HOUSE.setPopup(POPUP_MOMS_HOUSE);
+
+            if (MAP.isMoving()) {
+                console.log('flying to moms house!')
             }
-            if (inputVal === restaurants[2].name) {
-                console.log('my house works!');
-                const MY_HOUSE = new mapboxgl.Marker()
-                    .setLngLat([-98.579685, 29.52548])
-                    .addTo(MAP);
-                MAP.flyTo({
-                    center: [-98.579685, 29.52548],
-                    zoom: 10,
-                    speed: .5,
-                    curve: 1
-                })
-                const POPUP_MY_HOUSE = new mapboxgl.Popup()
-                    .setHTML('<p>MY HOUSE... <br> the best place to be.</p>');
-                MY_HOUSE.setPopup(POPUP_MY_HOUSE);
+        }
+        if (inputVal === restaurants[2].name) {
+            const MY_HOUSE = new mapboxgl.Marker()
+                .setLngLat([-98.579685, 29.52548])
+                .addTo(MAP);
+            MAP.flyTo({
+                center: [-98.579685, 29.52548],
+                zoom: 10,
+                speed: .5,
+                curve: 1
+            })
+            const POPUP_MY_HOUSE = new mapboxgl.Popup()
+                .setHTML('<p>MY HOUSE... <br> the best place to be.</p>');
+            MY_HOUSE.setPopup(POPUP_MY_HOUSE);
+
+            if (MAP.isMoving()) {
+                console.log('flying home!');
             }
-            restaurant.name = 'all';
-            if (inputVal === restaurant.name) {
-                const MY_HOUSE = new mapboxgl.Marker()
-                    .setLngLat([-98.579685, 29.52548])
-                    .addTo(MAP);
-                const POPUP_MY_HOUSE = new mapboxgl.Popup()
-                    .setHTML('<p>MY HOUSE... <br> the best place to be.</p>');
-                MY_HOUSE.setPopup(POPUP_MY_HOUSE);
-            }
-        });
-    })
+        }
+    });
+
+    console.log(MAP);
+
+
     geocode('8802 cinnamon creek drive San Antonio, TX 78240', MAPBOX_API_KEY).then(function (coordinates) {
         console.log(coordinates);
     });
