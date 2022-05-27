@@ -1,10 +1,35 @@
 .test-color{
-    margin-top: 5em;
+    margin-top: -3em;
     background: rgba(217, 211, 211, 0.84);
 }
 
-.move-search{
-    position: absolute;
-    top: 0;
-    right: 0;
+.hidden{
+    visibility: visible;
+}
+
+.map-search-bar{
+  display: flex;
+    justify-content: center;
+    transform: scale(80%);
+}
+
+.good-skies{
+    background-image: url(../img/good-skies.jpeg);
+}
+
+.circle-map{
+    border: 1px solid black;
+    border-radius: 5vw;
+}
+
+.map-search-icon{
+    display: flex;
+    justify-content: start;
+    transform: scale(150%);
+    padding-right: 10em;
+    padding-left: 10em;
+    padding-top: 1em;
+}
+.map-search-icon:hover{
+    color: orange;
 }

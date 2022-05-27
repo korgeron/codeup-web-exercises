@@ -4,57 +4,61 @@
     <meta charset="UTF-8">
     <title>Weather Map</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <script src="https://kit.fontawesome.com/53ed8b4ed8.js" crossorigin="anonymous"></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/weather_map.css">
+
 </head>
-<body>
+<body class="good-skies">
 <!--BANNER-->
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light mt-3 bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
-        </a>
+        <p></p>
     </div>
 </nav>
 
 
 <!--CARDS-->
-<div class="card d-flex border-0">
-    <div class="card-body row">
+<div class="card d-flex bg-transparent border-0">
+    <div class="card-body bg-transparent row">
         <div class="card-body col-4">
             <div class="card">
                 placeholder
             </div>
-            <br />
+            <br/>
             <div class="card">
                 placeholder
             </div>
-            <br />
+            <br/>
             <div class="card">
                 placeholder
             </div>
-            <br />
+            <br/>
             <div class="card">
                 placeholder
             </div>
-            <br />
+            <br/>
             <div class="card">
                 placeholder
             </div>
         </div>
-        <div class="card test-color ps-0 pe-0 border-0 col-8">
-            <div class="card-body">
-                <div id='map' style='width: auto; height: 60vh'></div>
+        <div class="card test-color ps-0 pe-0 border-0 col-8 circle-map" style="transform: scale(70%)">
+            <div class="card-body circle-map" >
+                <div id='map' style='width: auto; height: 100vh' class="circle-map"></div>
+                 <i id="map-searchIcon-ID" class="fa-solid fa-magnifying-glass-location map-search-icon"></i>
+                <div class="map-search-bar">
+                    <input id="map-search-ID" type="search" class="hidden">
+                    <button id="map-button-ID" type="button" class="btn-outline-dark hidden">Search</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="move-search">
-        <input type="search">
-        <button type="button" class="btn-outline-dark">Search</button>
-    </div>
+
+
+
 
 </div>
 

@@ -3,6 +3,7 @@ $.ajax(URL ,{
     method: 'GET',
     lat: 98.4946,
     lon: 29.4252,
+    units: 'imperial',
     appid: OPEN_WEATHER_KEY
 }).done(function (data){
     console.log(data);
@@ -18,3 +19,6 @@ const MAP = new mapboxgl.Map({
     zoom: 9 // starting zoom
 });
 
+$('#map-searchIcon-ID').click(function (){
+    alert('works');
+})
