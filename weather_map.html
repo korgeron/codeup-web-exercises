@@ -13,55 +13,58 @@
 </head>
 <body class="good-skies">
 <!--BANNER-->
-<nav class="navbar navbar-light mt-3 bg-dark">
+<nav class="navbar navbar-light  bg-transparent">
     <div class="container">
-        <p></p>
+        <p>Weather-Man-Stuff.myweather</p>
+        <div class="map-search-bar">
+            <input id="map-search-ID" type="search" class="hidden">
+            <button id="map-button-ID" type="button" class="btn-outline-dark hidden">Search</button>
+        </div>
     </div>
 </nav>
 
 
 <!--CARDS-->
 <div class="card d-flex bg-transparent border-0">
+
     <div class="card-body bg-transparent row">
-        <div class="card-body col-4">
-            <div class="card">
-                placeholder
-            </div>
-            <br/>
-            <div class="card">
-                placeholder
-            </div>
-            <br/>
-            <div class="card">
-                placeholder
-            </div>
-            <br/>
-            <div class="card">
-                placeholder
-            </div>
-            <br/>
-            <div class="card">
-                placeholder
+
+        <!--MAP CARD-->
+        <div class="card map-border-color ps-0 pe-0 border-0 col-8 map-style" style="transform: scale(70%)">
+            <div class="card-body map-style">
+                <div id='map' style='width: auto; height: 100%' class="map-style"></div>
+
             </div>
         </div>
-        <div class="card test-color ps-0 pe-0 border-0 col-8 circle-map" style="transform: scale(70%)">
-            <div class="card-body circle-map" >
-                <div id='map' style='width: auto; height: 100vh' class="circle-map"></div>
-                 <i id="map-searchIcon-ID" class="fa-solid fa-magnifying-glass-location map-search-icon"></i>
-                <div class="map-search-bar">
-                    <input id="map-search-ID" type="search" class="hidden">
-                    <button id="map-button-ID" type="button" class="btn-outline-dark hidden">Search</button>
-                </div>
+
+        <!--5 DAYS OF THE WEEK CARDS-->
+        <div class="card-body col-4">
+            <div class="card card-look-test">
+                placeholder
+            </div>
+            <br/>
+            <div class="card card-look-test">
+                placeholder
+            </div>
+            <br/>
+            <div class="card card-look-test">
+                placeholder
+            </div>
+            <br/>
+            <div class="card card-look-test">
+                placeholder
+            </div>
+            <br/>
+            <div class="card card-look-test">
+                placeholder
             </div>
         </div>
     </div>
-
-
-
-
-
 </div>
 
+
+<!--STOREHOUSE OF THINGS I MAY WANT TO USE LATER-->
+<!--<i id="map-searchIcon-ID" class="fa-solid fa-magnifying-glass-location map-search-icon"></i>-->
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
@@ -69,6 +72,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
+<script src="js/geocode.js"></script>
 <script src="js/weather_map.js"></script>
 </body>
 </html>
