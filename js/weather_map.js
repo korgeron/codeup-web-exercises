@@ -49,3 +49,6 @@ $('#map-button-ID').click(function () {
 });
 
 
+$('#mapIcon-ID').click(function (){
+    $('cardcontent').toggleClass('toggle-cardcontent');
+})
