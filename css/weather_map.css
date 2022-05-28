@@ -2,7 +2,8 @@
     background-image: url(../img/good-skies.jpeg);
 }
 .map-border-color{
-    margin-top: -3em;
+    margin-top: -6em;
+    margin-left: -4em;
     background: rgba(217, 211, 211, 0.84);
 }
 .map-style{
@@ -11,15 +12,17 @@
 }
 
 .hidden{
-    visibility: visible;
+    display: none;
 }
 
 .card-look-test{
     height: 5em;
     width: 10em;
 }
+.map-sidebar:hover{
+    padding-right: 7em;
 
-
+}
 
 .map-search-icon{
     display: flex;
