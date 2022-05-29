@@ -111,11 +111,11 @@ card {
             'cardbody';
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
-    /*border-radius: 10%;*/
     height: 200px;
     width: 80px;
     margin: .2em;
-    /*border: 1px solid black;*/
+
+
 }
 
 cardhead {
@@ -136,7 +136,56 @@ cardbody {
     height: auto;
     width: 100%;
     background: #3B94D9;
-    border: 1px solid red;
+    border: 1px solid orange;
     border-top: #ADD9E5;
     border-radius: 0 0 5% 5%;
+    display: grid;
+    grid-template-areas:
+            'description'
+            'temp'
+            'feelslike'
+            'humidity';
+    grid-template-rows: repeat(4, 1fr);
 }
+
+/*TODO: access card body data here*/
+description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 12px;
+    min-font-size: 10px;
+    text-align: center;
+}
+
+temp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+feelslike {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+humidity {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
