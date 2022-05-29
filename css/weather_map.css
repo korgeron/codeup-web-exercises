@@ -30,7 +30,7 @@ body {
 #mapIcon-ID {
     position: absolute;
     right: 53%;
-    top: 50%;
+    top: 30%;
     transform: scale(150%);
     transition: color .5s;
 }
