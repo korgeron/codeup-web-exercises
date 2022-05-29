@@ -28,9 +28,18 @@ $('#map-button-ID').click(function () {
             lat: coordinates[1],
             lon: coordinates[0],
             unit: 'imperial'
-        }).done(function (weather) {
-            console.log(weather);
+        }).done(function (results) {
+            console.log(results);
+            $('card:nth-child(1)').children('cardhead').css("background-image", "url('http://openweathermap.org/img/w/" + results.daily[0].weather[0].icon + ".png')");
+            $('card:nth-child(2)').children('cardhead').css("background-image", "url('http://openweathermap.org/img/w/" + results.daily[1].weather[0].icon + ".png')");
+            $('card:nth-child(3)').children('cardhead').css("background-image", "url('http://openweathermap.org/img/w/" + results.daily[2].weather[0].icon + ".png')");
+            $('card:nth-child(4)').children('cardhead').css("background-image", "url('http://openweathermap.org/img/w/" + results.daily[3].weather[0].icon + ".png')");
+            $('card:nth-child(5)').children('cardhead').css("background-image", "url('http://openweathermap.org/img/w/" + results.daily[4].weather[0].icon + ".png')");
+
         })
+
+
+
 
         const MARKER = new mapboxgl.Marker()
             .setLngLat([coordinates[0], coordinates[1]])
@@ -49,6 +58,11 @@ $('#map-button-ID').click(function () {
 });
 
 
-$('#mapIcon-ID').click(function (){
+$('.map-style').hover(function () {
+    $(this).css('padding-right', '4em');
+}, function () {
+    $(this).css('padding-right', '1em');
+})
+$('#mapIcon-ID').click(function () {
     $('cardcontent').toggleClass('toggle-cardcontent');
 })

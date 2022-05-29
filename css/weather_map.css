@@ -71,7 +71,7 @@ cardcontent {
     transition: 1s;
 }
 
-.toggle-cardcontent{
+.toggle-cardcontent {
     opacity: 100%;
     border-right: 1px solid black;
     right: 10%;
@@ -96,17 +96,40 @@ cardcontent {
     padding-right: 4em;
 }
 
-card{
-    border-radius: 10%;
+.grid-item:nth-child(3) {
+    display: flex;
+    justify-content: end;
+    padding-right: 1em;
+    padding-bottom: 18em;
+}
+
+/*TODO: STYLE CARD HERE*/
+card {
+    display: grid;
+    grid-template-areas:
+            'cardhead'
+            'cardbody';
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 5fr;
+    /*border-radius: 10%;*/
     height: 200px;
     width: 80px;
     margin: .2em;
     border: 1px solid black;
 }
 
-.grid-item:nth-child(3){
-    display: flex;
-    justify-content: end;
-    padding-right: 1em;
-    padding-bottom: 18em;
+cardhead {
+    grid-area: cardhead;
+    height: auto;
+    width: 100%;
+    background: #0fb784;
+    border: 1px solid orange;
+}
+
+cardbody {
+    grid-area: cardbody;
+    height: auto;
+    width: 100%;
+    background: #3B94D9;
+    border: 1px solid red;
 }
