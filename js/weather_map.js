@@ -67,6 +67,8 @@ $('#map-button-ID').click(function () {
             $('card:nth-child(4)').children('cardbody').children('humidity').html('humidity: ' + results.daily[3].humidity + '%');
             $('card:nth-child(5)').children('cardbody').children('humidity').html('humidity: ' + results.daily[4].humidity + '%');
 
+            //TODO: add values to current weather card
+            $('currenthead').css("background-image", "url('http://openweathermap.org/img/w/" + results.current.weather[0].icon + ".png')");;
         })
 
 
@@ -94,4 +96,6 @@ $('.map-style').hover(function () {
 })
 $('#mapIcon-ID').click(function () {
     $('cardcontent').toggleClass('toggle-cardcontent');
+    $('cardbox').toggleClass('toggle-cardbox');
+    $('currentweatherbox').toggleClass('toggle-currentweatherbox');
 })

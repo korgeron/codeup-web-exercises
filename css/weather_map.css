@@ -28,9 +28,13 @@ body {
 }
 
 #mapIcon-ID {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     right: 53%;
-    top: 30%;
+    top: 25%;
+    height: 300px;
     transform: scale(150%);
     transition: color .5s;
 }
@@ -53,31 +57,6 @@ mapcontent {
     margin-left: 1em;
     margin-bottom: 1em;
 }
-
-cardcontent {
-    grid-area: cardcontent;
-    opacity: 0;
-    border: 1px solid black;
-    border-right: none;
-    border-left: none;
-    background: lightgrey;
-    border-start-start-radius: unset;
-    border-start-end-radius: 10%;
-    border-end-end-radius: 10%;
-    position: relative;
-    height: 538px;
-    width: 257px;
-    right: 70%;
-    transition: 1s;
-}
-
-.toggle-cardcontent {
-    opacity: 100%;
-    border-right: 1px solid black;
-    right: 10%;
-    width: 500px;
-}
-
 
 .grid-item:nth-child(3) {
     display: flex;
@@ -104,6 +83,45 @@ cardcontent {
 }
 
 /*TODO: STYLE CARD HERE*/
+cardcontent {
+    grid-area: cardcontent;
+    opacity: 0;
+    border-right: none;
+    border-left: none;
+    background: lightgrey;
+    border-start-start-radius: unset;
+    border-start-end-radius: 10%;
+    border-end-end-radius: 10%;
+    position: relative;
+    height: 538px;
+    width: 257px;
+    right: 70%;
+    transition: 1s;
+}
+
+.toggle-cardcontent {
+    opacity: 40%;
+    border-right: 1px solid black;
+    right: 10%;
+    width: 500px;
+}
+
+cardbox {
+    display: flex;
+    position: absolute;
+    right: 40%;
+    top: 15%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.toggle-cardbox {
+    right: 7%;
+    top: 15%;
+    opacity: 100;
+    /*transition: 1s;*/
+}
+
 card {
     display: grid;
     grid-template-areas:
@@ -114,8 +132,6 @@ card {
     height: 200px;
     width: 80px;
     margin: .2em;
-
-
 }
 
 cardhead {
@@ -189,3 +205,45 @@ humidity {
     border-top: 1px solid black;
 }
 
+/*TODO: card for current weather*/
+currentweatherbox {
+    display: flex;
+    position: absolute;
+    right: 40%;
+    top: 55%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.toggle-currentweatherbox {
+    right: 7%;
+    top: 55%;
+    opacity: 100;
+}
+
+currentcard {
+    display: grid;
+    grid-template-areas:
+            'currenthead currentbody';
+    grid-template-columns: 1fr 2fr;
+    height: 200px;
+    width: 26.5rem;
+    margin: .2em;
+}
+
+currenthead {
+    grid-area: currenthead;
+    border-radius: 5% 0 0 5%;
+    border: 1px solid orange;
+    border-right: none;
+    background: lightblue no-repeat center;
+    background-size: cover;
+}
+
+currentbody {
+    grid-area: currentbody;
+    background: #3B94D9;
+    border-radius: 0 5% 5% 0;
+    border: 1px solid orange;
+    border-left: none;
+}
