@@ -1,0 +1,11 @@
+@media screen and (max-width: 1023px){
+    mapcontent{
+        display: none;
+    }
+    cardbox{
+        opacity: 100%;
+    }
+    currentweatherbox{
+        opacity: 100%;
+    }
+}

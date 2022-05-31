@@ -67,7 +67,7 @@ mapcontent {
 .map-style {
     border: 1px solid black;
     background: lightgrey;
-    border-radius: 10%;
+    border-radius: 10% 0 10% 0;
     transition: padding-right .5s;
 }
 
