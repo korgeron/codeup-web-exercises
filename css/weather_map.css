@@ -182,7 +182,7 @@ temp {
     align-self: center;
     font-size: 12px;
     text-align: center;
-    border-top: 1px solid black;
+    border-top: 1px dotted lightgrey;
 }
 
 feelslike {
@@ -192,7 +192,7 @@ feelslike {
     align-self: center;
     font-size: 12px;
     text-align: center;
-    border-top: 1px solid black;
+    border-top: 1px dotted lightgrey;
 }
 
 humidity {
@@ -202,7 +202,7 @@ humidity {
     align-self: center;
     font-size: 12px;
     text-align: center;
-    border-top: 1px solid black;
+    border-top: 1px dotted lightgrey;
 }
 
 /*TODO: card for current weather*/
@@ -246,4 +246,45 @@ currentbody {
     border-radius: 0 5% 5% 0;
     border: 1px solid orange;
     border-left: none;
+    display: grid;
+    grid-template-areas:
+            'c_description c_description'
+            'c_feelslike c_temp'
+            'c_humidity c_temp';
+    grid-template-rows: 1fr repeat(2, 2fr);
+    grid-template-columns: 1fr 1fr;
 }
+
+currentdescription{
+    grid-area: c_description;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 25px;
+    border-bottom: 1px dotted lightgrey;
+}
+
+currenttemp{
+    grid-area: c_temp;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    border-left: 1px dotted lightgrey;
+}
+
+currentfeelslike{
+    grid-area: c_feelslike;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+currenthumidity{
+    grid-area: c_humidity;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px dotted lightgrey;
+}
+
+
