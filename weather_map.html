@@ -10,7 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/weather_map.css">
-    <link rel="stylesheet" href="css/weather_media-query.css">
 </head>
 <body>
 
@@ -21,7 +20,7 @@
             <p>Weather-Man-Stuff.my-weather</p>
             <div class="map-search-bar">
                 <input id="map-search-ID" type="search">
-                <button id="map-button-ID" type="button" class="btn-outline-dark ">Search</button>
+                <button id="map-button-ID" type="button" class="btn-outline-success">Search</button>
             </div>
         </div>
     </topbar>
@@ -143,6 +142,8 @@
             <!--            <i id="mapIcon-ID" class="fa-solid fa-arrow-right-to-bracket"></i>-->
             <i id="mapIcon-ID" class="fa-solid fa-arrow-right-arrow-left"></i>
             <div id='map' style='width: auto; height: 90vh' class="map-style">
+
+            <buttoncontainer></buttoncontainer>
             </div>
         </div>
     </mapcontent>
