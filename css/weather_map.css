@@ -66,7 +66,7 @@ mapcontent {
 
 .map-style {
     border: 1px solid black;
-    background: lightgrey;
+    background: #B6E59E;
     border-radius: 10% 0 10% 0;
     transition: padding-right .5s;
 }
@@ -88,7 +88,7 @@ cardcontent {
     opacity: 0;
     border-right: none;
     border-left: none;
-    background: lightgrey;
+    background: #B6E59E;
     border-start-start-radius: unset;
     border-start-end-radius: 10%;
     border-end-end-radius: 10%;
@@ -119,7 +119,6 @@ cardbox {
     right: 7%;
     top: 15%;
     opacity: 100;
-    /*transition: 1s;*/
 }
 
 card {
@@ -287,4 +286,9 @@ currenthumidity{
     border-top: 1px dotted lightgrey;
 }
 
-
+buttoncontainer{
+    position: relative;
+    height: 100px;
+    width: 10px;
+    background: red;
+}
