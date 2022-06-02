@@ -61,18 +61,22 @@ users.forEach(function(user) {
   //       note that you can also use destructuring assignment in the function
   //       parameter definition
   const {name, email, languages} = user;
+  user.name = 'jim';
+  user.email= 'jim@jimsplace.com';
+  user.languages = 'javascript'
 
   // TODO: rewrite the assignment below to use template strings
-  developers.push(${name} '\'s email is ' ${email} ${name} +' knows ' ${languages}.join(', '));
+  developers.push(`${name} 's email is ${email}. ${name} knows ${languages.join(', ')}`);
 });
+
 
 // TODO: Use `let` for the following variable
 let list = '<ul>';
 
 // TODO: rewrite the following loop to use a for..of loop
-developers.forEach(function (developer) {
+for (let developer of developers) {
 
   // TODO: rewrite the assignment below to use template strings
   list += '<li>' + developer + '</li>';
-});
+}
 list += '</ul>';
