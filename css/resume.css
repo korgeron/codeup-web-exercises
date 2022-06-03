@@ -1,0 +1,21 @@
+
+container{
+    height: 600px;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        'leftside rightside';
+    grid-template-columns: 1fr 2fr;
+}
+
+
+leftside{
+    grid-area: leftside;
+    background: white;
+}
+
+rightside{
+    grid-area: rightside;
+    background: white;
+    border-left: 1px solid red;
+}
