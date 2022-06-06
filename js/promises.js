@@ -9,12 +9,11 @@ fetch(URL, {headers: {'Authorization': `token ${GITHUB_TOKEN_KEY}`}}).then((resp
 
 
     .then((data) => {
-        let eventFilter = data.filter((filteredData) => {
+        return data.filter((filteredData) => {
             if (filteredData.type === 'PushEvent') {
                 return filteredData
             }
-        })
-        return eventFilter;
+        });
     })
 
     .then((filter) => {
