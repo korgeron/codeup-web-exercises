@@ -36,32 +36,44 @@ const users = [
     }
 ];
 
-// const threeLanguages = users.filter(function (user){
-//     return (user.languages.length >= 3) ? user : null
-// });
+// console.log(users);
+
+const threeLanguages = users.filter(function (user){
+    return (user.languages.length >= 3) ? user : null
+});
 // console.log(threeLanguages);
-//
-// const emailArray = users.map(function (user){
-//     return user.email
-// });
+
+const emailArray = users.map(function (user){
+    return user.email
+});
 // console.log(emailArray);
-//
-// const totalYearsExperience = users.reduce(function (total ,user) {
-//     if (user.yearsOfExperience){
-//         return  total += user.yearsOfExperience / users.length
-//     }
-// }, 0);
-// console.log(totalYearsExperience);
-//
-// const longestEmail = users.reduce(function (email ,user){
-//    return (user.email.length < email.email.length) ? email : user
-// });
+
+const totalYearsExperience = users.reduce(function (total ,user) {
+    if (user.yearsOfExperience){
+        return  total += user.yearsOfExperience / users.length
+    }
+}, 0);
+// console.log(`Average years of experience: ${totalYearsExperience} years`);
+
+const longestEmail = users.reduce(function (email ,user){
+   return (user.email.length < email.email.length) ? email.email : user
+});
 // console.log(longestEmail);
-//
-// const listOfUserNames = users.reduce(function (name ,user){
-//     // console.log(user.name);
-//     // console.log(name);
-//     return (name !== user.name) ? name + ', ' + user.name  : null
-//
-// },'')
-// console.log( `Your instructors are${ listOfUserNames}. But not really... its just david`);
+
+const listOfUserNames = users.reduce(function (name ,user){
+    return (name !== user.name) ? name + ', ' + user.name  : null
+},'')
+console.log( `Your instructors are${ listOfUserNames}. But not really... its just david`);
+
+
+//BONUS WALKTHROUGH
+
+const uniqueLangs = users.reduce(function (langs,user){
+    for (let lang of user.languages){
+        if (!langs.includes(lang)){
+            langs.push(lang);
+        }
+    }
+        return langs;
+}, [])
+console.log(uniqueLangs);
