@@ -4,7 +4,7 @@
 }
 container{
     position: absolute;
-    background: greenyellow;
+    /*background: greenyellow;*/
     height: 600px;
     width: 100%;
     margin: 0;
@@ -12,8 +12,8 @@ container{
 }
 
 #playerCharacter{
-    position: absolute;
-    right: 50%;
-    top: 50%;
+    position: relative;
+    /*top: 60%;*/
+    /*left: 10%;*/
    transform: scale(300%);
 }
