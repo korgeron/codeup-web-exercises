@@ -183,6 +183,6 @@ console.log("Yay! I completed the warm-up!");
 // }
 //
 // console.log(makeObjectFromString('kevin'));
-
-
+const url = 'https://quotes.rest/qod'
+fetch(url).then((data) => data.json()).then((d)=> console.log(d));
 
